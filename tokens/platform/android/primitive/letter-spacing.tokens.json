@@ -1,0 +1,69 @@
+{
+  "primitive": {
+    "letterSpacing": {
+      "body": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 0
+        }
+      },
+      "callout": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 0
+        }
+      },
+      "caption2": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 0
+        }
+      },
+      "footnote": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 0
+        }
+      },
+      "largeTitle": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 0
+        }
+      },
+      "subheadline": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 0
+        }
+      },
+      "title1": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 0
+        }
+      },
+      "title2": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 0
+        }
+      },
+      "title3": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 0
+        }
+      }
+    }
+  }
+}

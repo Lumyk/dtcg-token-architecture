@@ -1,0 +1,41 @@
+{
+  "primitive": {
+    "borderWidth": {
+      "0": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 0
+        }
+      },
+      "0_5": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 0.5
+        }
+      },
+      "1": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 1
+        }
+      },
+      "2": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 2
+        }
+      },
+      "4": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 4
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "$schema": "https://www.designtokens.org/schemas/2025.10/resolver.json",
+  "modifiers": {
+    "appearance": {
+      "contexts": {
+        "contained": [],
+        "pill": [
+          {
+            "$ref": "appearance/pill/segmented-control.tokens.json"
+          }
+        ]
+      },
+      "default": "contained",
+      "description": "Coexisting appearance recipe (§9 activation)"
+    },
+    "theme": {
+      "contexts": {
+        "dark": [
+          {
+            "$ref": "theme/dark/color.tokens.json"
+          },
+          {
+            "$ref": "theme/dark/elevation.tokens.json"
+          }
+        ],
+        "dark-high-contrast": [
+          {
+            "$ref": "theme/dark-high-contrast/color.tokens.json"
+          },
+          {
+            "$ref": "theme/dark-high-contrast/elevation.tokens.json"
+          }
+        ],
+        "light": [
+          {
+            "$ref": "theme/light/color.tokens.json"
+          },
+          {
+            "$ref": "theme/light/elevation.tokens.json"
+          }
+        ],
+        "light-high-contrast": [
+          {
+            "$ref": "theme/light-high-contrast/color.tokens.json"
+          },
+          {
+            "$ref": "theme/light-high-contrast/elevation.tokens.json"
+          }
+        ]
+      },
+      "default": "light",
+      "description": "Appearance mode"
+    }
+  },
+  "name": "Design Tokens",
+  "resolutionOrder": [
+    {
+      "$ref": "#/sets/primitive"
+    },
+    {
+      "$ref": "#/sets/semantic"
+    },
+    {
+      "$ref": "#/modifiers/theme"
+    },
+    {
+      "$ref": "#/sets/component"
+    },
+    {
+      "$ref": "#/modifiers/appearance"
+    }
+  ],
+  "sets": {
+    "component": {
+      "description": "Per-component tokens referencing semantic roles",
+      "sources": [
+        {
+          "$ref": "component/avatar.tokens.json"
+        },
+        {
+          "$ref": "component/badge.tokens.json"
+        },
+        {
+          "$ref": "component/button.tokens.json"
+        },
+        {
+          "$ref": "component/card.tokens.json"
+        },
+        {
+          "$ref": "component/progress.tokens.json"
+        },
+        {
+          "$ref": "component/segmented-control.tokens.json"
+        },
+        {
+          "$ref": "component/text-field.tokens.json"
+        }
+      ]
+    },
+    "primitive": {
+      "description": "Primitive foundations: raw menus and addressable platform facts",
+      "sources": [
+        {
+          "$ref": "primitive/border-width.tokens.json"
+        },
+        {
+          "$ref": "primitive/color.tokens.json"
+        },
+        {
+          "$ref": "primitive/corner-radius.tokens.json"
+        },
+        {
+          "$ref": "primitive/font-family.tokens.json"
+        },
+        {
+          "$ref": "primitive/font-weight.tokens.json"
+        },
+        {
+          "$ref": "primitive/letter-spacing.tokens.json"
+        },
+        {
+          "$ref": "primitive/sizing.tokens.json"
+        },
+        {
+          "$ref": "primitive/spacing.tokens.json"
+        },
+        {
+          "$ref": "primitive/typography.tokens.json"
+        }
+      ]
+    },
+    "semantic": {
+      "description": "Mode-independent roles (typography scale, opacity, spacing, sizing, corner radius, border width)",
+      "sources": [
+        {
+          "$ref": "semantic/border-width.tokens.json"
+        },
+        {
+          "$ref": "semantic/corner-radius.tokens.json"
+        },
+        {
+          "$ref": "semantic/opacity.tokens.json"
+        },
+        {
+          "$ref": "semantic/sizing.tokens.json"
+        },
+        {
+          "$ref": "semantic/spacing.tokens.json"
+        },
+        {
+          "$ref": "semantic/typography.tokens.json"
+        }
+      ]
+    }
+  },
+  "version": "2025.10"
+}

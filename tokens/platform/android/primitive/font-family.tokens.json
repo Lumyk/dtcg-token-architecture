@@ -1,0 +1,24 @@
+{
+  "primitive": {
+    "fontFamily": {
+      "display": {
+        "$description": "Optical variant for sizes >= 20pt.",
+        "$type": "fontFamily",
+        "$value": "Roboto"
+      },
+      "mono": {
+        "$type": "fontFamily",
+        "$value": "Roboto Mono"
+      },
+      "rounded": {
+        "$type": "fontFamily",
+        "$value": "Google Sans Rounded"
+      },
+      "text": {
+        "$description": "Optical variant for sizes < 20pt.",
+        "$type": "fontFamily",
+        "$value": "Roboto"
+      }
+    }
+  }
+}

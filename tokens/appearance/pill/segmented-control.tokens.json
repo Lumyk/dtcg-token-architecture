@@ -1,0 +1,58 @@
+{
+  "component": {
+    "segmentedControl": {
+      "parts": {
+        "container": {
+          "background": {
+            "$type": "color",
+            "$value": "{primitive.color.transparent}"
+          },
+          "cornerRadius": {
+            "$type": "dimension",
+            "$value": "{primitive.cornerRadius.full}"
+          },
+          "gap": {
+            "$type": "dimension",
+            "$value": "{primitive.spacing.8}"
+          },
+          "paddingHorizontal": {
+            "$type": "dimension",
+            "$value": "{primitive.spacing.0}"
+          },
+          "paddingVertical": {
+            "$type": "dimension",
+            "$value": "{primitive.spacing.0}"
+          },
+          "shadow": {
+            "inner": {
+              "$type": "shadow",
+              "$value": "{elevation.none.shadow}"
+            }
+          }
+        },
+        "indicator": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.fill.subtle}"
+          },
+          "cornerRadius": {
+            "$type": "dimension",
+            "$value": "{primitive.cornerRadius.full}"
+          },
+          "shadow": {
+            "inner": {
+              "$type": "shadow",
+              "$value": "{elevation.none.shadow}"
+            }
+          }
+        },
+        "segment": {
+          "cornerRadius": {
+            "$type": "dimension",
+            "$value": "{primitive.cornerRadius.full}"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "spacing": {
+    "content": {
+      "$description": "Default breathing-room inset of a content container: scrollable content area, sheet body. Use when a container needs its standard internal air and no more specific role applies.",
+      "$type": "dimension",
+      "$value": "{primitive.spacing.16}"
+    },
+    "group": {
+      "$description": "Internal inset of a grouped block: padding inside a visually bounded cluster (card interior, form group, grouped list). Wraps content that reads as one unit.",
+      "$type": "dimension",
+      "$value": "{primitive.spacing.16}"
+    },
+    "inline": {
+      "$description": "Horizontal rhythm along the reading direction (RTL-neutral). Pick by relationship between neighbors, not by desired size.",
+      "related": {
+        "$description": "Between elements of one conceptual group laid out in a row: fields of the same form row, buttons of one action set.",
+        "$type": "dimension",
+        "$value": "{primitive.spacing.8}"
+      },
+      "tight": {
+        "$description": "Between tightly coupled elements that read as a single unit in a row: icon and its label, control and its adjoining control, compact metadata items.",
+        "$type": "dimension",
+        "$value": "{primitive.spacing.4}"
+      },
+      "unrelated": {
+        "$description": "Between independent neighbors in a row: separate groups or unrelated controls sharing one line.",
+        "$type": "dimension",
+        "$value": "{primitive.spacing.16}"
+      }
+    },
+    "screen": {
+      "$description": "Horizontal padding from screen edge to body content. Defaults to the content inset; resolves independently per width class when tablet layouts arrive — same name, resolver context, never width-graded names.",
+      "$extensions": {
+        "ios": {
+          "safeArea": "Additive: apply inside the safe area (UIKit insetsLayoutMarginsFromSafeArea semantics). Full-width or floating elements that must clear hardware features use max(screen, safeArea) at the component level instead."
+        }
+      },
+      "$type": "dimension",
+      "$value": "{spacing.content}"
+    },
+    "section": {
+      "$description": "Between major content regions of a screen: hero to body, one functional zone to the next. The largest rhythm step; if it feels insufficient, switch layout instead of scaling up.",
+      "$type": "dimension",
+      "$value": "{primitive.spacing.32}"
+    },
+    "stack": {
+      "$description": "Vertical rhythm along the block direction. Pick by relationship between neighbors, not by desired size.",
+      "related": {
+        "$description": "Between elements of one conceptual group stacked vertically: rows of the same form group, lines of one card body.",
+        "$type": "dimension",
+        "$value": "{primitive.spacing.8}"
+      },
+      "tight": {
+        "$description": "Between tightly coupled stacked elements that read as one unit: label above its value, helper text under its field, caption under an image.",
+        "$type": "dimension",
+        "$value": "{primitive.spacing.4}"
+      },
+      "unrelated": {
+        "$description": "Between independent groups stacked vertically: one form group to the next, card to unrelated card content.",
+        "$type": "dimension",
+        "$value": "{primitive.spacing.24}"
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "typography": {
+    "body": {
+      "$description": "Reading text: paragraphs, descriptions, multi-line content.",
+      "large": {
+        "$type": "typography",
+        "$value": "{primitive.typography.body}"
+      },
+      "medium": {
+        "$type": "typography",
+        "$value": "{primitive.typography.callout}"
+      },
+      "small": {
+        "$type": "typography",
+        "$value": "{primitive.typography.footnote}"
+      }
+    },
+    "caption": {
+      "$description": "Auxiliary text: timestamps, hints, metadata below content.",
+      "large": {
+        "$type": "typography",
+        "$value": "{primitive.typography.subheadline}"
+      },
+      "medium": {
+        "$type": "typography",
+        "$value": "{primitive.typography.caption1}"
+      },
+      "small": {
+        "$type": "typography",
+        "$value": "{primitive.typography.caption2}"
+      }
+    },
+    "code": {
+      "$description": "Monospaced text: code, identifiers, technical values.",
+      "medium": {
+        "$type": "typography",
+        "$value": "{primitive.typography.monoCode}"
+      }
+    },
+    "display": {
+      "$description": "Hero numbers and standout statements; not for heading hierarchy.",
+      "large": {
+        "$type": "typography",
+        "$value": "{primitive.typography.largeTitleBold}"
+      },
+      "medium": {
+        "$type": "typography",
+        "$value": "{primitive.typography.title1Bold}"
+      },
+      "small": {
+        "$type": "typography",
+        "$value": "{primitive.typography.title2Bold}"
+      }
+    },
+    "heading": {
+      "$description": "Screen and section titles; hierarchy via size, not weight.",
+      "large": {
+        "$type": "typography",
+        "$value": "{primitive.typography.title1}"
+      },
+      "medium": {
+        "$type": "typography",
+        "$value": "{primitive.typography.title2}"
+      },
+      "small": {
+        "$type": "typography",
+        "$value": "{primitive.typography.title3Semibold}"
+      }
+    },
+    "label": {
+      "$description": "UI labels that name or call to action: buttons, tabs, form labels; semibold by design.",
+      "large": {
+        "$type": "typography",
+        "$value": "{primitive.typography.title3Semibold}"
+      },
+      "medium": {
+        "$type": "typography",
+        "$value": "{primitive.typography.headline}"
+      },
+      "small": {
+        "$type": "typography",
+        "$value": "{primitive.typography.footnoteSemibold}"
+      }
+    }
+  }
+}

@@ -1,0 +1,351 @@
+{
+  "component": {
+    "avatar": {
+      "$description": "Use for identity or add-avatar presentation. Pair the icon with the placeholder background; monogram initials use ink and background from the same color.identity entry.",
+      "$extensions": {
+        "com.designsystem": {
+          "schemaVersion": 1,
+          "slots": ["parts.badge"]
+        }
+      },
+      "parts": {
+        "badge": {
+          "$description": "Slot for the status badge component; the host owns only placement metrics."
+        },
+        "container": {
+          "cornerRadius": {
+            "$type": "dimension",
+            "$value": "{primitive.cornerRadius.full}"
+          }
+        },
+        "emoji": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.fill.subtle}"
+          }
+        },
+        "icon": {
+          "$description": "The glyph of the placeholder (person) and add (plus) renderings.",
+          "color": {
+            "$type": "color",
+            "$value": "{color.icon.secondary}"
+          }
+        },
+        "initials": {
+          "$description": "Monogram rendering. Paint comes from the color.identity set, resolved by the host at runtime."
+        },
+        "placeholder": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.fill.subtle}"
+          },
+          "borderColor": {
+            "$description": "Typed absence by default; a brand may enable a placeholder outline.",
+            "$type": "color",
+            "$value": "{primitive.color.transparent}"
+          },
+          "borderWidth": {
+            "$type": "dimension",
+            "$value": "{primitive.borderWidth.0}"
+          }
+        },
+        "ring": {
+          "color": {
+            "$description": "Typed absence at rest; the consumer sets a status or brand ring color.",
+            "$type": "color",
+            "$value": "{primitive.color.transparent}"
+          },
+          "cornerRadius": {
+            "$description": "Ring shape, independent from the container corner radius.",
+            "$type": "dimension",
+            "$value": "{primitive.cornerRadius.full}"
+          },
+          "offset": {
+            "$description": "Gap between the container edge and the ring.",
+            "$type": "dimension",
+            "$value": "{primitive.spacing.2}"
+          },
+          "width": {
+            "$type": "dimension",
+            "$value": "{borderWidth.strong}"
+          }
+        }
+      },
+      "size": {
+        "extraLarge": {
+          "$description": "Profile hero: account screens, contact details.",
+          "parts": {
+            "badge": {
+              "offset": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.8}"
+              },
+              "size": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.20}"
+              }
+            },
+            "container": {
+              "diameter": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.80}"
+              }
+            },
+            "emoji": {
+              "typography": {
+                "$type": "typography",
+                "$value": "{typography.heading.medium}"
+              }
+            },
+            "icon": {
+              "size": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.40}"
+              }
+            },
+            "initials": {
+              "typography": {
+                "$type": "typography",
+                "$value": "{typography.heading.small}"
+              }
+            }
+          }
+        },
+        "extraSmall": {
+          "$description": "Inline mentions and dense metadata rows.",
+          "parts": {
+            "badge": {
+              "offset": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.2}"
+              },
+              "size": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.16}"
+              }
+            },
+            "container": {
+              "diameter": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.24}"
+              }
+            },
+            "emoji": {
+              "typography": {
+                "$type": "typography",
+                "$value": "{typography.caption.medium}"
+              }
+            },
+            "icon": {
+              "size": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.12}"
+              }
+            },
+            "initials": {
+              "typography": {
+                "$type": "typography",
+                "$value": "{typography.caption.small}"
+              }
+            }
+          }
+        },
+        "large": {
+          "$description": "Prominent list headers and cards about a person.",
+          "parts": {
+            "badge": {
+              "offset": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.6}"
+              },
+              "size": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.20}"
+              }
+            },
+            "container": {
+              "diameter": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.56}"
+              }
+            },
+            "emoji": {
+              "typography": {
+                "$type": "typography",
+                "$value": "{typography.heading.small}"
+              }
+            },
+            "icon": {
+              "size": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.24}"
+              }
+            },
+            "initials": {
+              "typography": {
+                "$type": "typography",
+                "$value": "{typography.label.medium}"
+              }
+            }
+          }
+        },
+        "medium": {
+          "$description": "The standard list-row avatar. Use unless the context demands otherwise.",
+          "parts": {
+            "badge": {
+              "offset": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.4}"
+              },
+              "size": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.16}"
+              }
+            },
+            "container": {
+              "diameter": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.40}"
+              }
+            },
+            "emoji": {
+              "typography": {
+                "$type": "typography",
+                "$value": "{typography.body.medium}"
+              }
+            },
+            "icon": {
+              "size": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.20}"
+              }
+            },
+            "initials": {
+              "typography": {
+                "$type": "typography",
+                "$value": "{typography.body.small}"
+              }
+            }
+          }
+        },
+        "small": {
+          "$description": "Compact rows and grouped stacks.",
+          "parts": {
+            "badge": {
+              "offset": {
+                "$description": "Badge on the circle arc; bespoke geometry with no matching primitive step.",
+                "$type": "dimension",
+                "$value": {
+                  "unit": "px",
+                  "value": 3
+                }
+              },
+              "size": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.16}"
+              }
+            },
+            "container": {
+              "diameter": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.32}"
+              }
+            },
+            "emoji": {
+              "typography": {
+                "$type": "typography",
+                "$value": "{typography.caption.large}"
+              }
+            },
+            "icon": {
+              "size": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.16}"
+              }
+            },
+            "initials": {
+              "typography": {
+                "$type": "typography",
+                "$value": "{typography.caption.medium}"
+              }
+            }
+          }
+        }
+      },
+      "variant": {
+        "$description": "What the tile represents: an identity, or the affordance to add one.",
+        "add": {
+          "$description": "The add-member affordance in avatar geometry — choose for the action tile that invites adding a person.",
+          "parts": {
+            "container": {
+              "background": {
+                "$type": "color",
+                "$value": "{color.fill.subtle}"
+              },
+              "borderColor": {
+                "$type": "color",
+                "$value": "{color.border.subtle}"
+              },
+              "borderWidth": {
+                "$type": "dimension",
+                "$value": "{borderWidth.strong}"
+              },
+              "dashGap": {
+                "$description": "Dashed-outline geometry; intrinsic to the add affordance.",
+                "$type": "dimension",
+                "$value": {
+                  "unit": "px",
+                  "value": 4
+                }
+              },
+              "dashLength": {
+                "$description": "Dashed-outline geometry; 0 means a solid line.",
+                "$type": "dimension",
+                "$value": {
+                  "unit": "px",
+                  "value": 6
+                }
+              }
+            }
+          }
+        },
+        "identity": {
+          "$description": "A person or entity: photo, monogram initials, or emoji, falling back to the placeholder glyph.",
+          "parts": {
+            "container": {
+              "background": {
+                "$description": "Typed absence: photo draws itself, monogram paint comes from color.identity at runtime.",
+                "$type": "color",
+                "$value": "{primitive.color.transparent}"
+              },
+              "borderColor": {
+                "$type": "color",
+                "$value": "{primitive.color.transparent}"
+              },
+              "borderWidth": {
+                "$type": "dimension",
+                "$value": "{primitive.borderWidth.0}"
+              },
+              "dashGap": {
+                "$description": "Dash geometry slot; 0 keeps the outline solid.",
+                "$type": "dimension",
+                "$value": {
+                  "unit": "px",
+                  "value": 0
+                }
+              },
+              "dashLength": {
+                "$description": "Dash geometry slot; 0 keeps the outline solid.",
+                "$type": "dimension",
+                "$value": {
+                  "unit": "px",
+                  "value": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

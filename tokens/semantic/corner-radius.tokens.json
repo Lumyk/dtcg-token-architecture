@@ -1,0 +1,25 @@
+{
+  "cornerRadius": {
+    "$description": "Corner rounding roles. Pick by the size and prominence of the element; rounding grows with the element.",
+    "full": {
+      "$description": "Pill and circle shapes that stay fully round at any size: chips, tags, badges, avatars.",
+      "$type": "dimension",
+      "$value": "{primitive.cornerRadius.full}"
+    },
+    "large": {
+      "$description": "Large controls and prominent containers: cards, toasts, sheets, hero-sized controls.",
+      "$type": "dimension",
+      "$value": "{primitive.cornerRadius.16}"
+    },
+    "medium": {
+      "$description": "Standard controls and grouped containers: buttons, inputs, search fields, inset sections.",
+      "$type": "dimension",
+      "$value": "{primitive.cornerRadius.12}"
+    },
+    "small": {
+      "$description": "Compact elements: small controls, tooltips, inline hints.",
+      "$type": "dimension",
+      "$value": "{primitive.cornerRadius.8}"
+    }
+  }
+}

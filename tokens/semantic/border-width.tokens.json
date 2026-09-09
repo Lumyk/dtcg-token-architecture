@@ -1,0 +1,25 @@
+{
+  "borderWidth": {
+    "$description": "Stroke thickness roles. Pick by the job of the line, not by desired weight.",
+    "default": {
+      "$description": "Standard outline of a control or container: outlined buttons, chips, input strokes at rest.",
+      "$type": "dimension",
+      "$value": "{primitive.borderWidth.1}"
+    },
+    "focus": {
+      "$description": "Thickness of the focus ring around the focused element. Geometric half of the focus indicator; the color half lives with the theme roles.",
+      "$type": "dimension",
+      "$value": "{primitive.borderWidth.2}"
+    },
+    "hairline": {
+      "$description": "The thinnest visible line: separators, dividers, subtle outlines. Approximates a true one-physical-pixel hairline on current display scales; a scale-resolved value would be exact, this is the tokenized compromise.",
+      "$type": "dimension",
+      "$value": "{primitive.borderWidth.0_5}"
+    },
+    "strong": {
+      "$description": "Emphasized stroke: selected or active state, error outline, decorative rings that must read clearly.",
+      "$type": "dimension",
+      "$value": "{primitive.borderWidth.2}"
+    }
+  }
+}

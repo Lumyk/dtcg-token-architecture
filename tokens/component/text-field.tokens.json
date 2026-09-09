@@ -1,0 +1,601 @@
+{
+  "component": {
+    "textField": {
+      "$description": "Use for text entry. Pair input, label, placeholder, icons, chevron, and bottom border with the container. Pair helper and counter with the surrounding color.canvas or color.surface (excluding color.surface.inverse). Focus uses the adjacency pairs declared by color.focus.ring.",
+      "$extensions": {
+        "com.designsystem": {
+          "materials": {
+            "parts.container": {
+              "kind": "glass"
+            }
+          },
+          "schemaVersion": 1
+        }
+      },
+      "layout": {
+        "default": {
+          "parts": {
+            "container": {
+              "minHeight": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.48}"
+              },
+              "paddingVertical": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.0}"
+              }
+            }
+          }
+        },
+        "floating": {
+          "parts": {
+            "container": {
+              "minHeight": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.56}"
+              },
+              "paddingVertical": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.0}"
+              }
+            }
+          }
+        },
+        "floatingMultiline": {
+          "parts": {
+            "container": {
+              "minHeight": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.112}"
+              },
+              "paddingVertical": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.12}"
+              }
+            }
+          }
+        },
+        "multiline": {
+          "parts": {
+            "container": {
+              "minHeight": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.96}"
+              },
+              "paddingVertical": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.12}"
+              }
+            }
+          }
+        }
+      },
+      "parts": {
+        "container": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.fill.input}"
+          },
+          "borderWidthBottom": {
+            "$type": "dimension",
+            "$value": "{primitive.borderWidth.2}"
+          },
+          "cornerRadiusBottom": {
+            "$description": "Filled recipe: flat bottom edge meeting the underline.",
+            "$type": "dimension",
+            "$value": "{primitive.cornerRadius.0}"
+          },
+          "cornerRadiusTop": {
+            "$description": "Filled recipe: rounded top edge.",
+            "$type": "dimension",
+            "$value": "{primitive.cornerRadius.12}"
+          },
+          "focusRingOffset": {
+            "$type": "dimension",
+            "$value": "{primitive.spacing.0}"
+          },
+          "focusRingWidth": {
+            "$type": "dimension",
+            "$value": "{borderWidth.focus}"
+          },
+          "gap": {
+            "$description": "Horizontal gap between the icon and the input text.",
+            "$type": "dimension",
+            "$value": "{primitive.spacing.8}"
+          },
+          "paddingLeading": {
+            "$type": "dimension",
+            "$value": "{primitive.spacing.16}"
+          },
+          "paddingTrailing": {
+            "$type": "dimension",
+            "$value": "{primitive.spacing.16}"
+          }
+        },
+        "chevron": {
+          "gap": {
+            "$description": "Horizontal gap between the trailing content and the chevron.",
+            "$type": "dimension",
+            "$value": "{primitive.spacing.8}"
+          },
+          "size": {
+            "$type": "dimension",
+            "$value": "{sizing.icon.small}"
+          }
+        },
+        "counter": {
+          "paddingTrailing": {
+            "$type": "dimension",
+            "$value": "{primitive.spacing.4}"
+          },
+          "typography": {
+            "$type": "typography",
+            "$value": "{typography.caption.medium}"
+          }
+        },
+        "helper": {
+          "gap": {
+            "$description": "Vertical gap between the field box and the footer row.",
+            "$type": "dimension",
+            "$value": "{primitive.spacing.4}"
+          },
+          "paddingLeading": {
+            "$type": "dimension",
+            "$value": "{primitive.spacing.4}"
+          },
+          "typography": {
+            "$type": "typography",
+            "$value": "{typography.caption.medium}"
+          }
+        },
+        "input": {
+          "typography": {
+            "$type": "typography",
+            "$value": "{typography.body.large}"
+          }
+        },
+        "label": {
+          "gap": {
+            "$description": "Vertical gap between the label and the field box.",
+            "$type": "dimension",
+            "$value": "{primitive.spacing.4}"
+          },
+          "paddingLeading": {
+            "$type": "dimension",
+            "$value": "{primitive.spacing.4}"
+          },
+          "paddingTrailing": {
+            "$type": "dimension",
+            "$value": "{primitive.spacing.4}"
+          },
+          "typography": {
+            "$type": "typography",
+            "$value": "{typography.caption.medium}"
+          }
+        },
+        "leadingIcon": {
+          "size": {
+            "$type": "dimension",
+            "$value": "{primitive.sizing.20}"
+          }
+        },
+        "placeholder": {
+          "typography": {
+            "$type": "typography",
+            "$value": "{typography.body.large}"
+          }
+        },
+        "trailingIcon": {
+          "size": {
+            "$type": "dimension",
+            "$value": "{primitive.sizing.20}"
+          }
+        }
+      },
+      "state": {
+        "default": {
+          "parts": {
+            "chevron": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.icon.secondary}"
+              }
+            },
+            "container": {
+              "borderColor": {
+                "$type": "color",
+                "$value": "{primitive.color.transparent}"
+              },
+              "borderColorBottom": {
+                "$type": "color",
+                "$value": "{color.border.input}"
+              },
+              "borderWidth": {
+                "$type": "dimension",
+                "$value": "{primitive.borderWidth.0}"
+              },
+              "focusRingColor": {
+                "$type": "color",
+                "$value": "{primitive.color.transparent}"
+              },
+              "shadow": {
+                "inner": {
+                  "$type": "shadow",
+                  "$value": "{elevation.none.shadow}"
+                },
+                "outer": {
+                  "$type": "shadow",
+                  "$value": "{elevation.none.shadow}"
+                }
+              }
+            },
+            "counter": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.secondary}"
+              }
+            },
+            "helper": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.secondary}"
+              }
+            },
+            "input": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.primary}"
+              }
+            },
+            "label": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.secondary}"
+              }
+            },
+            "leadingIcon": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.tertiary}"
+              }
+            },
+            "placeholder": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.tertiary}"
+              }
+            },
+            "trailingIcon": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.tertiary}"
+              }
+            }
+          }
+        },
+        "disabled": {
+          "parts": {
+            "chevron": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.icon.disabled}"
+              }
+            },
+            "container": {
+              "borderColor": {
+                "$type": "color",
+                "$value": "{primitive.color.transparent}"
+              },
+              "borderColorBottom": {
+                "$type": "color",
+                "$value": "{color.border.input}"
+              },
+              "borderWidth": {
+                "$type": "dimension",
+                "$value": "{primitive.borderWidth.0}"
+              },
+              "focusRingColor": {
+                "$type": "color",
+                "$value": "{primitive.color.transparent}"
+              },
+              "shadow": {
+                "inner": {
+                  "$type": "shadow",
+                  "$value": "{elevation.none.shadow}"
+                },
+                "outer": {
+                  "$type": "shadow",
+                  "$value": "{elevation.none.shadow}"
+                }
+              }
+            },
+            "counter": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.disabled}"
+              }
+            },
+            "helper": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.disabled}"
+              }
+            },
+            "input": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.disabled}"
+              }
+            },
+            "label": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.disabled}"
+              }
+            },
+            "leadingIcon": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.disabled}"
+              }
+            },
+            "placeholder": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.disabled}"
+              }
+            },
+            "trailingIcon": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.disabled}"
+              }
+            }
+          }
+        },
+        "error": {
+          "parts": {
+            "chevron": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.icon.secondary}"
+              }
+            },
+            "container": {
+              "borderColor": {
+                "$type": "color",
+                "$value": "{primitive.color.transparent}"
+              },
+              "borderColorBottom": {
+                "$type": "color",
+                "$value": "{color.border.error}"
+              },
+              "borderWidth": {
+                "$type": "dimension",
+                "$value": "{primitive.borderWidth.0}"
+              },
+              "focusRingColor": {
+                "$type": "color",
+                "$value": "{primitive.color.transparent}"
+              },
+              "shadow": {
+                "inner": {
+                  "$type": "shadow",
+                  "$value": "{elevation.none.shadow}"
+                },
+                "outer": {
+                  "$type": "shadow",
+                  "$value": "{elevation.none.shadow}"
+                }
+              }
+            },
+            "counter": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.error}"
+              }
+            },
+            "helper": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.error}"
+              }
+            },
+            "input": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.primary}"
+              }
+            },
+            "label": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.error}"
+              }
+            },
+            "leadingIcon": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.tertiary}"
+              }
+            },
+            "placeholder": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.tertiary}"
+              }
+            },
+            "trailingIcon": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.tertiary}"
+              }
+            }
+          }
+        },
+        "focused": {
+          "parts": {
+            "chevron": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.icon.secondary}"
+              }
+            },
+            "container": {
+              "borderColor": {
+                "$type": "color",
+                "$value": "{primitive.color.transparent}"
+              },
+              "borderColorBottom": {
+                "$type": "color",
+                "$value": "{color.border.input}"
+              },
+              "borderWidth": {
+                "$type": "dimension",
+                "$value": "{primitive.borderWidth.0}"
+              },
+              "focusRingColor": {
+                "$type": "color",
+                "$value": "{color.focus.ring}"
+              },
+              "shadow": {
+                "inner": {
+                  "$type": "shadow",
+                  "$value": "{elevation.none.shadow}"
+                },
+                "outer": {
+                  "$type": "shadow",
+                  "$value": "{elevation.none.shadow}"
+                }
+              }
+            },
+            "counter": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.secondary}"
+              }
+            },
+            "helper": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.secondary}"
+              }
+            },
+            "input": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.primary}"
+              }
+            },
+            "label": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.interactive.tint.default}"
+              }
+            },
+            "leadingIcon": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.interactive.tint.default}"
+              }
+            },
+            "placeholder": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.tertiary}"
+              }
+            },
+            "trailingIcon": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.interactive.tint.default}"
+              }
+            }
+          }
+        },
+        "focusedError": {
+          "parts": {
+            "chevron": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.icon.secondary}"
+              }
+            },
+            "container": {
+              "borderColor": {
+                "$type": "color",
+                "$value": "{primitive.color.transparent}"
+              },
+              "borderColorBottom": {
+                "$type": "color",
+                "$value": "{color.border.error}"
+              },
+              "borderWidth": {
+                "$type": "dimension",
+                "$value": "{primitive.borderWidth.0}"
+              },
+              "focusRingColor": {
+                "$type": "color",
+                "$value": "{color.focus.ring}"
+              },
+              "shadow": {
+                "inner": {
+                  "$type": "shadow",
+                  "$value": "{elevation.none.shadow}"
+                },
+                "outer": {
+                  "$type": "shadow",
+                  "$value": "{elevation.none.shadow}"
+                }
+              }
+            },
+            "counter": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.error}"
+              }
+            },
+            "helper": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.error}"
+              }
+            },
+            "input": {
+              "color": {
+                "$description": "Neutral channel: user content never takes validation color.",
+                "$type": "color",
+                "$value": "{color.text.primary}"
+              }
+            },
+            "label": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.error}"
+              }
+            },
+            "leadingIcon": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.interactive.tint.default}"
+              }
+            },
+            "placeholder": {
+              "color": {
+                "$description": "Neutral channel: owned by neither validation nor interaction.",
+                "$type": "color",
+                "$value": "{color.text.tertiary}"
+              }
+            },
+            "trailingIcon": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.interactive.tint.default}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

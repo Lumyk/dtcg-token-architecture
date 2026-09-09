@@ -1,0 +1,51 @@
+{
+  "primitive": {
+    "fontWeight": {
+      "black": {
+        "$description": "900",
+        "$type": "fontWeight",
+        "$value": 900
+      },
+      "bold": {
+        "$description": "700",
+        "$type": "fontWeight",
+        "$value": 700
+      },
+      "heavy": {
+        "$description": "800",
+        "$type": "fontWeight",
+        "$value": 800
+      },
+      "light": {
+        "$description": "300",
+        "$type": "fontWeight",
+        "$value": 300
+      },
+      "medium": {
+        "$description": "500",
+        "$type": "fontWeight",
+        "$value": 500
+      },
+      "regular": {
+        "$description": "400",
+        "$type": "fontWeight",
+        "$value": 400
+      },
+      "semibold": {
+        "$description": "600",
+        "$type": "fontWeight",
+        "$value": 600
+      },
+      "thin": {
+        "$description": "200",
+        "$type": "fontWeight",
+        "$value": 200
+      },
+      "ultraLight": {
+        "$description": "100",
+        "$type": "fontWeight",
+        "$value": 100
+      }
+    }
+  }
+}

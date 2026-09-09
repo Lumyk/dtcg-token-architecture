@@ -1,0 +1,252 @@
+{
+  "elevation": {
+    "$description": "Depth recipes: each level is a group of typed leaves {shadow, surface, border} consumed as a WHOLE \u2014 components take the level, never assemble surface x elevation by hand.",
+    "concave": {
+      "$description": "Concave face of a raised element (inner slot only); HC drops it entirely.",
+      "border": {
+        "$description": "Typed absence in standard themes.",
+        "$type": "color",
+        "$value": "{primitive.color.transparent}"
+      },
+      "shadow": {
+        "$type": "shadow",
+        "$value": {
+          "blur": {
+            "unit": "px",
+            "value": 14
+          },
+          "color": {
+            "alpha": 0.1,
+            "colorSpace": "srgb",
+            "components": [
+              0,
+              0,
+              0
+            ]
+          },
+          "inset": true,
+          "offsetX": {
+            "unit": "px",
+            "value": 0
+          },
+          "offsetY": {
+            "unit": "px",
+            "value": 5
+          },
+          "spread": {
+            "unit": "px",
+            "value": 2
+          }
+        }
+      }
+    },
+    "modal": {
+      "$description": "Dialog-only; anchored full-height sheets are surface.default.",
+      "border": {
+        "$description": "Transparent in standard themes; visible boundary replaces shadow in HC.",
+        "$type": "color",
+        "$value": "{primitive.color.transparent}"
+      },
+      "shadow": {
+        "$description": "Dialog-only (anchored sheets sit on surface.default at raised level).",
+        "$type": "shadow",
+        "$value": {
+          "blur": {
+            "unit": "px",
+            "value": 16
+          },
+          "color": {
+            "alpha": 0.15,
+            "colorSpace": "srgb",
+            "components": [
+              0,
+              0,
+              0
+            ]
+          },
+          "offsetX": {
+            "unit": "px",
+            "value": 0
+          },
+          "offsetY": {
+            "unit": "px",
+            "value": 8
+          },
+          "spread": {
+            "unit": "px",
+            "value": -2
+          }
+        }
+      },
+      "surface": {
+        "$description": "Recipe-internal surface reference \u2014 consumed via the recipe, not directly.",
+        "$type": "color",
+        "$value": "{color.surface.overlay}"
+      }
+    },
+    "none": {
+      "$description": "Typed absence; surface leaf deliberately missing (no single referent).",
+      "border": {
+        "$description": "Typed absence of the HC boundary.",
+        "$type": "color",
+        "$value": "{primitive.color.transparent}"
+      },
+      "shadow": {
+        "$description": "Typed absence \u2014 states that drop their shadow reference this leaf.",
+        "$type": "shadow",
+        "$value": {
+          "blur": {
+            "unit": "px",
+            "value": 0
+          },
+          "color": {
+            "alpha": 0.0,
+            "colorSpace": "srgb",
+            "components": [
+              0,
+              0,
+              0
+            ]
+          },
+          "offsetX": {
+            "unit": "px",
+            "value": 0
+          },
+          "offsetY": {
+            "unit": "px",
+            "value": 0
+          },
+          "spread": {
+            "unit": "px",
+            "value": 0
+          }
+        }
+      }
+    },
+    "overlay": {
+      "border": {
+        "$description": "Transparent in standard themes; visible boundary replaces shadow in HC.",
+        "$type": "color",
+        "$value": "{primitive.color.transparent}"
+      },
+      "shadow": {
+        "$description": "Floating above content \u2014 menus, popovers, tooltips.",
+        "$type": "shadow",
+        "$value": {
+          "blur": {
+            "unit": "px",
+            "value": 8
+          },
+          "color": {
+            "alpha": 0.1,
+            "colorSpace": "srgb",
+            "components": [
+              0,
+              0,
+              0
+            ]
+          },
+          "offsetX": {
+            "unit": "px",
+            "value": 0
+          },
+          "offsetY": {
+            "unit": "px",
+            "value": 4
+          },
+          "spread": {
+            "unit": "px",
+            "value": -1
+          }
+        }
+      },
+      "surface": {
+        "$description": "Recipe-internal surface reference \u2014 consumed via the recipe, not directly.",
+        "$type": "color",
+        "$value": "{color.surface.overlay}"
+      }
+    },
+    "raised": {
+      "border": {
+        "$description": "Transparent in standard themes; visible boundary replaces shadow in HC.",
+        "$type": "color",
+        "$value": "{primitive.color.transparent}"
+      },
+      "shadow": {
+        "$description": "Resting elevation; dark keeps a tighter shadow, HC drops shadows entirely.",
+        "$type": "shadow",
+        "$value": {
+          "blur": {
+            "unit": "px",
+            "value": 3
+          },
+          "color": {
+            "alpha": 0.06,
+            "colorSpace": "srgb",
+            "components": [
+              0,
+              0,
+              0
+            ]
+          },
+          "offsetX": {
+            "unit": "px",
+            "value": 0
+          },
+          "offsetY": {
+            "unit": "px",
+            "value": 1
+          },
+          "spread": {
+            "unit": "px",
+            "value": 0
+          }
+        }
+      },
+      "surface": {
+        "$description": "Recipe-internal surface reference \u2014 consumed via the recipe, not directly.",
+        "$type": "color",
+        "$value": "{color.surface.raised}"
+      }
+    },
+    "sunken": {
+      "$description": "Recessed surface: a track or well pressed below its surroundings; HC drops the shadow and shows the boundary.",
+      "border": {
+        "$description": "Typed absence in standard themes.",
+        "$type": "color",
+        "$value": "{primitive.color.transparent}"
+      },
+      "shadow": {
+        "$type": "shadow",
+        "$value": {
+          "blur": {
+            "unit": "px",
+            "value": 3
+          },
+          "color": {
+            "alpha": 0.12,
+            "colorSpace": "srgb",
+            "components": [
+              0,
+              0,
+              0
+            ]
+          },
+          "inset": true,
+          "offsetX": {
+            "unit": "px",
+            "value": 0
+          },
+          "offsetY": {
+            "unit": "px",
+            "value": 1
+          },
+          "spread": {
+            "unit": "px",
+            "value": 0
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "primitive": {
+    "typography": {
+      "body": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".body"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.text}",
+          "fontSize": {
+            "unit": "px",
+            "value": 17
+          },
+          "fontWeight": "{primitive.fontWeight.regular}",
+          "letterSpacing": "{primitive.letterSpacing.body}",
+          "lineHeight": 1.2941176470588236
+        }
+      },
+      "bodyRounded": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".body"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.rounded}",
+          "fontSize": {
+            "unit": "px",
+            "value": 17
+          },
+          "fontWeight": "{primitive.fontWeight.regular}",
+          "letterSpacing": "{primitive.letterSpacing.body}",
+          "lineHeight": 1.2941176470588236
+        }
+      },
+      "bodySemibold": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".body",
+            "weight": ".semibold"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.text}",
+          "fontSize": {
+            "unit": "px",
+            "value": 17
+          },
+          "fontWeight": "{primitive.fontWeight.semibold}",
+          "letterSpacing": "{primitive.letterSpacing.body}",
+          "lineHeight": 1.2941176470588236
+        }
+      },
+      "callout": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".callout"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.text}",
+          "fontSize": {
+            "unit": "px",
+            "value": 16
+          },
+          "fontWeight": "{primitive.fontWeight.regular}",
+          "letterSpacing": "{primitive.letterSpacing.callout}",
+          "lineHeight": 1.3125
+        }
+      },
+      "caption1": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".caption"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.text}",
+          "fontSize": {
+            "unit": "px",
+            "value": 12
+          },
+          "fontWeight": "{primitive.fontWeight.regular}",
+          "letterSpacing": "{primitive.letterSpacing.caption1}",
+          "lineHeight": 1.3333333333333333
+        }
+      },
+      "caption2": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".caption2"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.text}",
+          "fontSize": {
+            "unit": "px",
+            "value": 11
+          },
+          "fontWeight": "{primitive.fontWeight.regular}",
+          "letterSpacing": "{primitive.letterSpacing.caption2}",
+          "lineHeight": 1.1818181818181819
+        }
+      },
+      "displayBlack": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".largeTitle",
+            "weight": ".black"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.display}",
+          "fontSize": {
+            "unit": "px",
+            "value": 34
+          },
+          "fontWeight": "{primitive.fontWeight.black}",
+          "letterSpacing": "{primitive.letterSpacing.largeTitle}",
+          "lineHeight": 1.2058823529411764
+        }
+      },
+      "footnote": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".footnote"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.text}",
+          "fontSize": {
+            "unit": "px",
+            "value": 13
+          },
+          "fontWeight": "{primitive.fontWeight.regular}",
+          "letterSpacing": "{primitive.letterSpacing.footnote}",
+          "lineHeight": 1.3846153846153846
+        }
+      },
+      "footnoteSemibold": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".footnote",
+            "weight": ".semibold"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.text}",
+          "fontSize": {
+            "unit": "px",
+            "value": 13
+          },
+          "fontWeight": "{primitive.fontWeight.semibold}",
+          "letterSpacing": "{primitive.letterSpacing.footnote}",
+          "lineHeight": 1.3846153846153846
+        }
+      },
+      "headline": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".headline"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.text}",
+          "fontSize": {
+            "unit": "px",
+            "value": 17
+          },
+          "fontWeight": "{primitive.fontWeight.semibold}",
+          "letterSpacing": "{primitive.letterSpacing.body}",
+          "lineHeight": 1.2941176470588236
+        }
+      },
+      "largeTitle": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".largeTitle"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.display}",
+          "fontSize": {
+            "unit": "px",
+            "value": 34
+          },
+          "fontWeight": "{primitive.fontWeight.regular}",
+          "letterSpacing": "{primitive.letterSpacing.largeTitle}",
+          "lineHeight": 1.2058823529411764
+        }
+      },
+      "largeTitleBold": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".largeTitle",
+            "weight": ".bold"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.display}",
+          "fontSize": {
+            "unit": "px",
+            "value": 34
+          },
+          "fontWeight": "{primitive.fontWeight.bold}",
+          "letterSpacing": "{primitive.letterSpacing.largeTitle}",
+          "lineHeight": 1.2058823529411764
+        }
+      },
+      "largeTitleHeavy": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".largeTitle",
+            "weight": ".heavy"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.display}",
+          "fontSize": {
+            "unit": "px",
+            "value": 34
+          },
+          "fontWeight": "{primitive.fontWeight.heavy}",
+          "letterSpacing": "{primitive.letterSpacing.largeTitle}",
+          "lineHeight": 1.2058823529411764
+        }
+      },
+      "monoCode": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".body"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.mono}",
+          "fontSize": {
+            "unit": "px",
+            "value": 17
+          },
+          "fontWeight": "{primitive.fontWeight.regular}",
+          "letterSpacing": "{primitive.letterSpacing.body}",
+          "lineHeight": 1.2941176470588236
+        }
+      },
+      "subheadline": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".subheadline"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.text}",
+          "fontSize": {
+            "unit": "px",
+            "value": 15
+          },
+          "fontWeight": "{primitive.fontWeight.regular}",
+          "letterSpacing": "{primitive.letterSpacing.subheadline}",
+          "lineHeight": 1.3333333333333333
+        }
+      },
+      "title1": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".title"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.display}",
+          "fontSize": {
+            "unit": "px",
+            "value": 28
+          },
+          "fontWeight": "{primitive.fontWeight.regular}",
+          "letterSpacing": "{primitive.letterSpacing.title1}",
+          "lineHeight": 1.2142857142857142
+        }
+      },
+      "title1Bold": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".title",
+            "weight": ".bold"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.display}",
+          "fontSize": {
+            "unit": "px",
+            "value": 28
+          },
+          "fontWeight": "{primitive.fontWeight.bold}",
+          "letterSpacing": "{primitive.letterSpacing.title1}",
+          "lineHeight": 1.2142857142857142
+        }
+      },
+      "title2": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".title2"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.display}",
+          "fontSize": {
+            "unit": "px",
+            "value": 22
+          },
+          "fontWeight": "{primitive.fontWeight.regular}",
+          "letterSpacing": "{primitive.letterSpacing.title2}",
+          "lineHeight": 1.2727272727272727
+        }
+      },
+      "title2Bold": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".title2",
+            "weight": ".bold"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.display}",
+          "fontSize": {
+            "unit": "px",
+            "value": 22
+          },
+          "fontWeight": "{primitive.fontWeight.bold}",
+          "letterSpacing": "{primitive.letterSpacing.title2}",
+          "lineHeight": 1.2727272727272727
+        }
+      },
+      "title3": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".title3"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.display}",
+          "fontSize": {
+            "unit": "px",
+            "value": 20
+          },
+          "fontWeight": "{primitive.fontWeight.regular}",
+          "letterSpacing": "{primitive.letterSpacing.title3}",
+          "lineHeight": 1.25
+        }
+      },
+      "title3Semibold": {
+        "$extensions": {
+          "com.apple.swift": {
+            "textStyle": ".title3",
+            "weight": ".semibold"
+          }
+        },
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{primitive.fontFamily.display}",
+          "fontSize": {
+            "unit": "px",
+            "value": 20
+          },
+          "fontWeight": "{primitive.fontWeight.semibold}",
+          "letterSpacing": "{primitive.letterSpacing.title3}",
+          "lineHeight": 1.25
+        }
+      }
+    }
+  }
+}

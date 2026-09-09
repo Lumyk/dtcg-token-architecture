@@ -1,0 +1,47 @@
+{
+  "sizing": {
+    "control": {
+      "height": {
+        "$description": "Standard heights of interactive controls that align in a form row: buttons, inputs, pickers. Pick by density and prominence, not by content.",
+        "compact": {
+          "$description": "Dense contexts: toolbars, inline filters, secondary actions where vertical space is scarce.",
+          "$type": "dimension",
+          "$value": "{primitive.sizing.32}"
+        },
+        "default": {
+          "$description": "The standard control height, matching the platform's comfortable touch row. Use unless density or prominence demands otherwise.",
+          "$type": "dimension",
+          "$value": "{primitive.sizing.44}"
+        },
+        "large": {
+          "$description": "Prominent controls: primary call to action, hero forms. The tallest step; if it feels insufficient, redesign the layout instead of scaling up.",
+          "$type": "dimension",
+          "$value": "{primitive.sizing.56}"
+        }
+      }
+    },
+    "icon": {
+      "$description": "Optical steps for icon dimensions. Pick by the size of the surrounding context; the first three steps pair with the control heights.",
+      "extraLarge": {
+        "$description": "Prominent standalone icons: feature highlights, decorative accents. The largest UI-icon step.",
+        "$type": "dimension",
+        "$value": "{primitive.sizing.32}"
+      },
+      "large": {
+        "$description": "In a large control, navigation bars, or as a standalone interactive icon.",
+        "$type": "dimension",
+        "$value": "{primitive.sizing.24}"
+      },
+      "medium": {
+        "$description": "In a default-height control or beside body-scale text.",
+        "$type": "dimension",
+        "$value": "{primitive.sizing.20}"
+      },
+      "small": {
+        "$description": "In a compact control or beside caption-scale text.",
+        "$type": "dimension",
+        "$value": "{primitive.sizing.16}"
+      }
+    }
+  }
+}

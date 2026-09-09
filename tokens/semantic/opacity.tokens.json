@@ -1,0 +1,19 @@
+{
+  "opacity": {
+    "disabled": {
+      "$description": "Whole-element dimming for disabled states. Never stack on resolved muted/disabled colors — double dimming breaks contrast in high-contrast themes.",
+      "$type": "number",
+      "$value": 0.4
+    },
+    "loading": {
+      "$description": "Content dimming while loading: existing content kept visible but muted during refresh or progressive load.",
+      "$type": "number",
+      "$value": 0.6
+    },
+    "pressed": {
+      "$description": "Whole-element highlight dimming for pressed states (iOS idiom), not a state-layer overlay alpha.",
+      "$type": "number",
+      "$value": 0.8
+    }
+  }
+}

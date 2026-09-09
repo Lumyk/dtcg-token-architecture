@@ -1,0 +1,271 @@
+{
+  "elevation": {
+    "modal": {
+      "shadow": {
+        "$description": "Material 6dp dialog elevation.",
+        "$type": "shadow",
+        "$value": [
+          {
+            "blur": {
+              "unit": "px",
+              "value": 5
+            },
+            "color": {
+              "alpha": 0.2,
+              "colorSpace": "srgb",
+              "components": [
+                0,
+                0,
+                0
+              ]
+            },
+            "offsetX": {
+              "unit": "px",
+              "value": 0
+            },
+            "offsetY": {
+              "unit": "px",
+              "value": 3
+            },
+            "spread": {
+              "unit": "px",
+              "value": -1
+            }
+          },
+          {
+            "blur": {
+              "unit": "px",
+              "value": 10
+            },
+            "color": {
+              "alpha": 0.14,
+              "colorSpace": "srgb",
+              "components": [
+                0,
+                0,
+                0
+              ]
+            },
+            "offsetX": {
+              "unit": "px",
+              "value": 0
+            },
+            "offsetY": {
+              "unit": "px",
+              "value": 6
+            },
+            "spread": {
+              "unit": "px",
+              "value": 0
+            }
+          },
+          {
+            "blur": {
+              "unit": "px",
+              "value": 18
+            },
+            "color": {
+              "alpha": 0.12,
+              "colorSpace": "srgb",
+              "components": [
+                0,
+                0,
+                0
+              ]
+            },
+            "offsetX": {
+              "unit": "px",
+              "value": 0
+            },
+            "offsetY": {
+              "unit": "px",
+              "value": 1
+            },
+            "spread": {
+              "unit": "px",
+              "value": 0
+            }
+          }
+        ]
+      }
+    },
+    "overlay": {
+      "shadow": {
+        "$description": "Material 3dp \u2014 menus, popovers, tooltips.",
+        "$type": "shadow",
+        "$value": [
+          {
+            "blur": {
+              "unit": "px",
+              "value": 3
+            },
+            "color": {
+              "alpha": 0.2,
+              "colorSpace": "srgb",
+              "components": [
+                0,
+                0,
+                0
+              ]
+            },
+            "offsetX": {
+              "unit": "px",
+              "value": 0
+            },
+            "offsetY": {
+              "unit": "px",
+              "value": 3
+            },
+            "spread": {
+              "unit": "px",
+              "value": -2
+            }
+          },
+          {
+            "blur": {
+              "unit": "px",
+              "value": 4
+            },
+            "color": {
+              "alpha": 0.14,
+              "colorSpace": "srgb",
+              "components": [
+                0,
+                0,
+                0
+              ]
+            },
+            "offsetX": {
+              "unit": "px",
+              "value": 0
+            },
+            "offsetY": {
+              "unit": "px",
+              "value": 3
+            },
+            "spread": {
+              "unit": "px",
+              "value": 0
+            }
+          },
+          {
+            "blur": {
+              "unit": "px",
+              "value": 8
+            },
+            "color": {
+              "alpha": 0.12,
+              "colorSpace": "srgb",
+              "components": [
+                0,
+                0,
+                0
+              ]
+            },
+            "offsetX": {
+              "unit": "px",
+              "value": 0
+            },
+            "offsetY": {
+              "unit": "px",
+              "value": 1
+            },
+            "spread": {
+              "unit": "px",
+              "value": 0
+            }
+          }
+        ]
+      }
+    },
+    "raised": {
+      "shadow": {
+        "$description": "Material 1dp resting elevation.",
+        "$type": "shadow",
+        "$value": [
+          {
+            "blur": {
+              "unit": "px",
+              "value": 1
+            },
+            "color": {
+              "alpha": 0.2,
+              "colorSpace": "srgb",
+              "components": [
+                0,
+                0,
+                0
+              ]
+            },
+            "offsetX": {
+              "unit": "px",
+              "value": 0
+            },
+            "offsetY": {
+              "unit": "px",
+              "value": 2
+            },
+            "spread": {
+              "unit": "px",
+              "value": -1
+            }
+          },
+          {
+            "blur": {
+              "unit": "px",
+              "value": 1
+            },
+            "color": {
+              "alpha": 0.14,
+              "colorSpace": "srgb",
+              "components": [
+                0,
+                0,
+                0
+              ]
+            },
+            "offsetX": {
+              "unit": "px",
+              "value": 0
+            },
+            "offsetY": {
+              "unit": "px",
+              "value": 1
+            },
+            "spread": {
+              "unit": "px",
+              "value": 0
+            }
+          },
+          {
+            "blur": {
+              "unit": "px",
+              "value": 3
+            },
+            "color": {
+              "alpha": 0.12,
+              "colorSpace": "srgb",
+              "components": [
+                0,
+                0,
+                0
+              ]
+            },
+            "offsetX": {
+              "unit": "px",
+              "value": 0
+            },
+            "offsetY": {
+              "unit": "px",
+              "value": 1
+            },
+            "spread": {
+              "unit": "px",
+              "value": 0
+            }
+          }
+        ]
+      }
+    }
+  }
+}

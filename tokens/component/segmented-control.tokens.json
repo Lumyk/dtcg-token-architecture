@@ -1,0 +1,384 @@
+{
+  "component": {
+    "segmentedControl": {
+      "$description": "Use to select one option. Pair selected labels and icons with the indicator, and unselected labels and icons with the container. In every appearance recipe, transparent backgrounds reveal color.canvas or color.surface (excluding color.surface.inverse).",
+      "$extensions": {
+        "com.designsystem": {
+          "materials": {
+            "parts.container": {
+              "kind": "glass"
+            },
+            "parts.indicator": {
+              "kind": "glass"
+            }
+          },
+          "schemaVersion": 1
+        }
+      },
+      "parts": {
+        "container": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.fill.subtle}"
+          },
+          "borderColor": {
+            "$type": "color",
+            "$value": "{primitive.color.transparent}"
+          },
+          "borderWidth": {
+            "$type": "dimension",
+            "$value": "{primitive.borderWidth.0}"
+          },
+          "cornerRadius": {
+            "$type": "dimension",
+            "$value": "{primitive.cornerRadius.12}"
+          },
+          "gap": {
+            "$description": "Gap between segments.",
+            "$type": "dimension",
+            "$value": "{primitive.spacing.0}"
+          },
+          "minHeight": {
+            "$type": "dimension",
+            "$value": "{primitive.sizing.36}"
+          },
+          "paddingHorizontal": {
+            "$type": "dimension",
+            "$value": "{primitive.spacing.2}"
+          },
+          "paddingVertical": {
+            "$type": "dimension",
+            "$value": "{primitive.spacing.2}"
+          },
+          "shadow": {
+            "inner": {
+              "$type": "shadow",
+              "$value": "{elevation.sunken.shadow}"
+            },
+            "outer": {
+              "$type": "shadow",
+              "$value": "{elevation.none.shadow}"
+            }
+          }
+        },
+        "divider": {
+          "$description": "Vertical hairline between adjacent segments.",
+          "color": {
+            "$type": "color",
+            "$value": "{primitive.color.transparent}"
+          },
+          "thickness": {
+            "$type": "dimension",
+            "$value": "{primitive.borderWidth.0}"
+          }
+        },
+        "indicator": {
+          "$description": "Selection affordance: an intrinsically sized plane over the selected segment.",
+          "background": {
+            "$type": "color",
+            "$value": "{color.surface.raised}"
+          },
+          "borderColor": {
+            "$type": "color",
+            "$value": "{primitive.color.transparent}"
+          },
+          "borderWidth": {
+            "$type": "dimension",
+            "$value": "{primitive.borderWidth.0}"
+          },
+          "cornerRadius": {
+            "$description": "container.cornerRadius - container.padding = 12 - 2 = 10 (concentric).",
+            "$type": "dimension",
+            "$value": {
+              "unit": "px",
+              "value": 10
+            }
+          },
+          "inset": {
+            "$type": "dimension",
+            "$value": "{primitive.spacing.0}"
+          },
+          "parts": {
+            "bar": {
+              "$description": "Bottom-anchored selection bar inside the indicator.",
+              "background": {
+                "$type": "color",
+                "$value": "{primitive.color.transparent}"
+              },
+              "cornerRadius": {
+                "$type": "dimension",
+                "$value": "{primitive.cornerRadius.0}"
+              },
+              "height": {
+                "$type": "dimension",
+                "$value": "{primitive.borderWidth.0}"
+              },
+              "inset": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.0}"
+              }
+            }
+          },
+          "shadow": {
+            "inner": {
+              "$type": "shadow",
+              "$value": "{elevation.concave.shadow}"
+            },
+            "outer": {
+              "$type": "shadow",
+              "$value": "{elevation.raised.shadow}"
+            }
+          }
+        },
+        "segment": {
+          "cornerRadius": {
+            "$type": "dimension",
+            "$value": "{primitive.cornerRadius.0}"
+          },
+          "gap": {
+            "$description": "Gap between icon and label.",
+            "$type": "dimension",
+            "$value": "{primitive.spacing.4}"
+          },
+          "paddingHorizontal": {
+            "$type": "dimension",
+            "$value": "{primitive.spacing.12}"
+          },
+          "paddingVertical": {
+            "$type": "dimension",
+            "$value": "{primitive.spacing.8}"
+          },
+          "parts": {
+            "icon": {
+              "size": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.16}"
+              }
+            }
+          }
+        },
+        "separator": {
+          "$description": "Hairline under the whole control.",
+          "color": {
+            "$type": "color",
+            "$value": "{primitive.color.transparent}"
+          },
+          "thickness": {
+            "$type": "dimension",
+            "$value": "{primitive.borderWidth.0}"
+          }
+        }
+      },
+      "state": {
+        "default": {
+          "parts": {
+            "container": {
+              "opacity": {
+                "$type": "number",
+                "$value": 1
+              }
+            }
+          },
+          "selection": {
+            "selected": {
+              "parts": {
+                "segment": {
+                  "background": {
+                    "$type": "color",
+                    "$value": "{primitive.color.transparent}"
+                  },
+                  "borderColor": {
+                    "$type": "color",
+                    "$value": "{primitive.color.transparent}"
+                  },
+                  "borderWidth": {
+                    "$type": "dimension",
+                    "$value": "{primitive.borderWidth.0}"
+                  },
+                  "parts": {
+                    "icon": {
+                      "color": {
+                        "$type": "color",
+                        "$value": "{color.text.primary}"
+                      }
+                    },
+                    "label": {
+                      "color": {
+                        "$type": "color",
+                        "$value": "{color.text.primary}"
+                      },
+                      "typography": {
+                        "$type": "typography",
+                        "$value": "{typography.label.small}"
+                      }
+                    }
+                  },
+                  "shadow": {
+                    "inner": {
+                      "$type": "shadow",
+                      "$value": "{elevation.none.shadow}"
+                    },
+                    "outer": {
+                      "$type": "shadow",
+                      "$value": "{elevation.none.shadow}"
+                    }
+                  }
+                }
+              }
+            },
+            "unselected": {
+              "parts": {
+                "segment": {
+                  "background": {
+                    "$type": "color",
+                    "$value": "{primitive.color.transparent}"
+                  },
+                  "borderColor": {
+                    "$type": "color",
+                    "$value": "{primitive.color.transparent}"
+                  },
+                  "borderWidth": {
+                    "$type": "dimension",
+                    "$value": "{primitive.borderWidth.0}"
+                  },
+                  "parts": {
+                    "icon": {
+                      "color": {
+                        "$type": "color",
+                        "$value": "{color.text.secondary}"
+                      }
+                    },
+                    "label": {
+                      "color": {
+                        "$type": "color",
+                        "$value": "{color.text.secondary}"
+                      },
+                      "typography": {
+                        "$type": "typography",
+                        "$value": "{typography.body.small}"
+                      }
+                    }
+                  },
+                  "shadow": {
+                    "inner": {
+                      "$type": "shadow",
+                      "$value": "{elevation.none.shadow}"
+                    },
+                    "outer": {
+                      "$type": "shadow",
+                      "$value": "{elevation.none.shadow}"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "disabled": {
+          "parts": {
+            "container": {
+              "opacity": {
+                "$type": "number",
+                "$value": "{opacity.disabled}"
+              }
+            }
+          },
+          "selection": {
+            "selected": {
+              "parts": {
+                "segment": {
+                  "background": {
+                    "$type": "color",
+                    "$value": "{primitive.color.transparent}"
+                  },
+                  "borderColor": {
+                    "$type": "color",
+                    "$value": "{primitive.color.transparent}"
+                  },
+                  "borderWidth": {
+                    "$type": "dimension",
+                    "$value": "{primitive.borderWidth.0}"
+                  },
+                  "parts": {
+                    "icon": {
+                      "color": {
+                        "$type": "color",
+                        "$value": "{color.text.primary}"
+                      }
+                    },
+                    "label": {
+                      "color": {
+                        "$type": "color",
+                        "$value": "{color.text.primary}"
+                      },
+                      "typography": {
+                        "$type": "typography",
+                        "$value": "{typography.label.small}"
+                      }
+                    }
+                  },
+                  "shadow": {
+                    "inner": {
+                      "$type": "shadow",
+                      "$value": "{elevation.none.shadow}"
+                    },
+                    "outer": {
+                      "$type": "shadow",
+                      "$value": "{elevation.none.shadow}"
+                    }
+                  }
+                }
+              }
+            },
+            "unselected": {
+              "parts": {
+                "segment": {
+                  "background": {
+                    "$type": "color",
+                    "$value": "{primitive.color.transparent}"
+                  },
+                  "borderColor": {
+                    "$type": "color",
+                    "$value": "{primitive.color.transparent}"
+                  },
+                  "borderWidth": {
+                    "$type": "dimension",
+                    "$value": "{primitive.borderWidth.0}"
+                  },
+                  "parts": {
+                    "icon": {
+                      "color": {
+                        "$type": "color",
+                        "$value": "{color.text.secondary}"
+                      }
+                    },
+                    "label": {
+                      "color": {
+                        "$type": "color",
+                        "$value": "{color.text.secondary}"
+                      },
+                      "typography": {
+                        "$type": "typography",
+                        "$value": "{typography.body.small}"
+                      }
+                    }
+                  },
+                  "shadow": {
+                    "inner": {
+                      "$type": "shadow",
+                      "$value": "{elevation.none.shadow}"
+                    },
+                    "outer": {
+                      "$type": "shadow",
+                      "$value": "{elevation.none.shadow}"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

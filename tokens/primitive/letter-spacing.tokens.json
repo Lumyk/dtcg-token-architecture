@@ -1,0 +1,86 @@
+{
+  "primitive": {
+    "letterSpacing": {
+      "body": {
+        "$description": "SF tracking of the 17px text styles.",
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": -0.41
+        }
+      },
+      "callout": {
+        "$description": "SF tracking of the 16px text styles.",
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": -0.32
+        }
+      },
+      "caption1": {
+        "$description": "SF tracking of the 12px text styles.",
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 0
+        }
+      },
+      "caption2": {
+        "$description": "SF tracking of the 11px text styles.",
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 0.07
+        }
+      },
+      "footnote": {
+        "$description": "SF tracking of the 13px text styles.",
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": -0.08
+        }
+      },
+      "largeTitle": {
+        "$description": "SF tracking of the 34px text styles.",
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 0.37
+        }
+      },
+      "subheadline": {
+        "$description": "SF tracking of the 15px text styles.",
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": -0.24
+        }
+      },
+      "title1": {
+        "$description": "SF tracking of the 28px text styles.",
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 0.36
+        }
+      },
+      "title2": {
+        "$description": "SF tracking of the 22px text styles.",
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 0.35
+        }
+      },
+      "title3": {
+        "$description": "SF tracking of the 20px text styles.",
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 0.38
+        }
+      }
+    }
+  }
+}

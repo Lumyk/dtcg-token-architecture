@@ -1,0 +1,49 @@
+{
+  "primitive": {
+    "cornerRadius": {
+      "0": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 0
+        }
+      },
+      "12": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 12
+        }
+      },
+      "16": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 16
+        }
+      },
+      "4": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 4
+        }
+      },
+      "8": {
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 8
+        }
+      },
+      "full": {
+        "$description": "Fully rounded (pill/circle) — sentinel radius, clamped to half the smaller dimension at render.",
+        "$type": "dimension",
+        "$value": {
+          "unit": "px",
+          "value": 9999
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "component": {
+    "badge": {
+      "$description": "Use for compact status labels and counts. Pair each variant's label and icon with its container background.",
+      "$extensions": {
+        "com.designsystem": {
+          "schemaVersion": 1
+        }
+      },
+      "parts": {
+        "container": {
+          "cornerRadius": {
+            "$type": "dimension",
+            "$value": "{cornerRadius.full}"
+          }
+        },
+        "label": {
+          "typography": {
+            "$type": "typography",
+            "$value": "{typography.caption.small}"
+          }
+        },
+        "outline": {
+          "$description": "Cutout ring shown when the badge sits on another element (avatar); matches the surface behind it.",
+          "color": {
+            "$type": "color",
+            "$value": "{color.surface.default}"
+          },
+          "width": {
+            "$type": "dimension",
+            "$value": "{primitive.borderWidth.2}"
+          }
+        }
+      },
+      "size": {
+        "medium": {
+          "parts": {
+            "container": {
+              "gap": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.2}"
+              },
+              "height": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.20}"
+              },
+              "minWidth": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.20}"
+              },
+              "paddingHorizontal": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.4}"
+              }
+            },
+            "dot": {
+              "size": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.12}"
+              }
+            },
+            "icon": {
+              "size": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.12}"
+              }
+            }
+          }
+        },
+        "small": {
+          "parts": {
+            "container": {
+              "gap": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.2}"
+              },
+              "height": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.16}"
+              },
+              "minWidth": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.16}"
+              },
+              "paddingHorizontal": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.2}"
+              }
+            },
+            "dot": {
+              "size": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.8}"
+              }
+            },
+            "icon": {
+              "size": {
+                "$type": "dimension",
+                "$value": "{primitive.sizing.12}"
+              }
+            }
+          }
+        }
+      },
+      "variant": {
+        "$description": "Status intent of the badge; pick by the meaning being communicated, never by the color.",
+        "brand": {
+          "$description": "Brand emphasis without status meaning: new items, feature markers tied to the product accent.",
+          "parts": {
+            "container": {
+              "background": {
+                "$type": "color",
+                "$value": "{color.interactive.bold.default}"
+              }
+            },
+            "icon": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.interactive.onBold}"
+              }
+            },
+            "label": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.interactive.onBold}"
+              }
+            }
+          }
+        },
+        "error": {
+          "$description": "Failure or a blocking problem: failed sync, count of invalid items.",
+          "parts": {
+            "container": {
+              "background": {
+                "$type": "color",
+                "$value": "{color.status.error.bold}"
+              }
+            },
+            "icon": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.status.error.onBold}"
+              }
+            },
+            "label": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.status.error.onBold}"
+              }
+            }
+          }
+        },
+        "info": {
+          "$description": "Neutral informational status: informative counts and hints.",
+          "parts": {
+            "container": {
+              "background": {
+                "$type": "color",
+                "$value": "{color.status.info.bold}"
+              }
+            },
+            "icon": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.status.info.onBold}"
+              }
+            },
+            "label": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.status.info.onBold}"
+              }
+            }
+          }
+        },
+        "neutral": {
+          "$description": "No status meaning: plain counts and labels.",
+          "parts": {
+            "container": {
+              "background": {
+                "$type": "color",
+                "$value": "{color.fill.subtle}"
+              }
+            },
+            "icon": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.secondary}"
+              }
+            },
+            "label": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.text.secondary}"
+              }
+            }
+          }
+        },
+        "success": {
+          "$description": "Positive status: completed, synced, healthy.",
+          "parts": {
+            "container": {
+              "background": {
+                "$type": "color",
+                "$value": "{color.status.success.bold}"
+              }
+            },
+            "icon": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.status.success.onBold}"
+              }
+            },
+            "label": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.status.success.onBold}"
+              }
+            }
+          }
+        },
+        "warning": {
+          "$description": "Caution: attention required, degraded state.",
+          "parts": {
+            "container": {
+              "background": {
+                "$type": "color",
+                "$value": "{color.status.warning.bold}"
+              }
+            },
+            "icon": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.status.warning.onBold}"
+              }
+            },
+            "label": {
+              "color": {
+                "$type": "color",
+                "$value": "{color.status.warning.onBold}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

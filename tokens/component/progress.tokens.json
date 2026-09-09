@@ -1,0 +1,146 @@
+{
+  "component": {
+    "progress": {
+      "$description": "Use to show progress. Pair the fill with the track as meaningful non-text information in both structural variants.",
+      "$extensions": {
+        "com.designsystem": {
+          "schemaVersion": 1,
+          "variantKind": "structural"
+        }
+      },
+      "parts": {
+        "fill": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.interactive.bold.default}"
+          }
+        },
+        "track": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.fill.subtle}"
+          }
+        }
+      },
+      "variant": {
+        "$description": "Presentation of the same progress meaning: a bar along an edge or a ring around a point.",
+        "circular": {
+          "$description": "A ring: standalone loaders and compact waiting states where no edge anchors a bar.",
+          "size": {
+            "large": {
+              "$description": "Full-screen loader.",
+              "parts": {
+                "track": {
+                  "diameter": {
+                    "$type": "dimension",
+                    "$value": "{primitive.sizing.40}"
+                  },
+                  "thickness": {
+                    "$description": "Ring stroke; bespoke geometry with no matching primitive step.",
+                    "$type": "dimension",
+                    "$value": {
+                      "unit": "px",
+                      "value": 4
+                    }
+                  }
+                }
+              }
+            },
+            "medium": {
+              "$description": "The standard loader. Use unless the context demands otherwise.",
+              "parts": {
+                "track": {
+                  "diameter": {
+                    "$type": "dimension",
+                    "$value": "{primitive.sizing.24}"
+                  },
+                  "thickness": {
+                    "$description": "Ring stroke; bespoke geometry with no matching primitive step.",
+                    "$type": "dimension",
+                    "$value": {
+                      "unit": "px",
+                      "value": 3
+                    }
+                  }
+                }
+              }
+            },
+            "small": {
+              "$description": "Inline with text.",
+              "parts": {
+                "track": {
+                  "diameter": {
+                    "$type": "dimension",
+                    "$value": "{primitive.sizing.16}"
+                  },
+                  "thickness": {
+                    "$description": "Ring stroke; bespoke geometry with no matching primitive step.",
+                    "$type": "dimension",
+                    "$value": {
+                      "unit": "px",
+                      "value": 2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "linear": {
+          "$description": "A bar: progress attached to content it measures — uploads, media, page position.",
+          "parts": {
+            "track": {
+              "cornerRadius": {
+                "$type": "dimension",
+                "$value": "{primitive.cornerRadius.full}"
+              }
+            }
+          },
+          "size": {
+            "large": {
+              "$description": "Thick bar for prominent standalone progress.",
+              "parts": {
+                "track": {
+                  "height": {
+                    "$description": "Bespoke geometry with no matching primitive step.",
+                    "$type": "dimension",
+                    "$value": {
+                      "unit": "px",
+                      "value": 6
+                    }
+                  }
+                }
+              }
+            },
+            "medium": {
+              "$description": "The standard bar. Use unless the context demands otherwise.",
+              "parts": {
+                "track": {
+                  "height": {
+                    "$type": "dimension",
+                    "$value": "{primitive.sizing.4}"
+                  }
+                }
+              }
+            },
+            "small": {
+              "$description": "Hairline bar for dense or ambient contexts.",
+              "parts": {
+                "track": {
+                  "height": {
+                    "$description": "Bespoke geometry with no matching primitive step.",
+                    "$type": "dimension",
+                    "$value": {
+                      "unit": "px",
+                      "value": 2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,548 @@
+{
+  "color": {
+    "border": {
+      "$description": "Use input, selected, and status borders against color.canvas or color.surface (excluding color.surface.inverse), color.fill.input, or color.fill.subtle. Use subtle borders only for decoration; default and bold are neutral outlines, not selection indicators.",
+      "bold": {
+        "$description": "Stronger neutral outline — intensity, NOT selection.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.500}"
+      },
+      "default": {
+        "$description": "Neutral outline.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.700}"
+      },
+      "error": {
+        "$description": "Error status boundary (validation), coexists with any interaction state.",
+        "$type": "color",
+        "$value": "{primitive.color.red.400}"
+      },
+      "info": {
+        "$description": "Info status boundary.",
+        "$type": "color",
+        "$value": "{primitive.color.blue.400}"
+      },
+      "input": {
+        "$description": "Form-control boundary — >=3:1 adjacency contract (WCAG 1.4.11).",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.500}"
+      },
+      "inverse": {
+        "$description": "Use for boundaries on or around color.surface.inverse.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.500}"
+      },
+      "selected": {
+        "$description": "THE selected/active outline; sanctioned alias of the interactive ramp.",
+        "$type": "color",
+        "$value": "{color.interactive.bold.default}"
+      },
+      "subtle": {
+        "$description": "Decorative stroke/divider — MAY sit below 3:1. Alpha in standard themes, opaque override in high contrast.",
+        "$type": "color",
+        "$value": {
+          "alpha": 0.1,
+          "colorSpace": "srgb",
+          "components": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "success": {
+        "$description": "Success status boundary.",
+        "$type": "color",
+        "$value": "{primitive.color.green.400}"
+      },
+      "warning": {
+        "$description": "Warning status boundary.",
+        "$type": "color",
+        "$value": "{primitive.color.amber.400}"
+      }
+    },
+    "canvas": {
+      "$description": "Base layer screens sit on; nothing exists below canvas. Contract: safe to extend under system UI (status-bar content keeps contrast in every theme).",
+      "default": {
+        "$description": "Plain screens. Safe to extend under system UI in every theme.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.950}"
+      },
+      "inset": {
+        "$description": "Grouped/inset screens (iOS grouped idiom). Only sanctioned recession word.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.900}"
+      }
+    },
+    "fill": {
+      "$description": "Neutral shell of input-like controls: box, track, field interior. Action hue appears only in the sanctioned selected alias. NOT buttons (interactive), NOT cards (surface), NOT banners (status).",
+      "control": {
+        "$description": "Box/track — ONE bounded interior. Thumb/indicator and other coexisting anatomy are component anatomy tokens.",
+        "default": {
+          "$description": "Rest interior of the box/track. Thumb and coexisting anatomy are component tokens.",
+          "$type": "color",
+          "$value": "{primitive.color.neutral.700}"
+        },
+        "disabled": {
+          "$description": "Opaque form interior where whole-element dimming cannot apply. Never stacked with opacity.disabled.",
+          "$type": "color",
+          "$value": "{primitive.color.neutral.800}"
+        },
+        "hover": {
+          "$description": "Hover slot: equals default in all authored themes; pointer platforms may override values only.",
+          "$type": "color",
+          "$value": "{color.fill.control.default}"
+        },
+        "pressed": {
+          "$description": "Pressed interior; carve-out: may also paint the transient pressed interior of a tappable row.",
+          "$type": "color",
+          "$value": "{primitive.color.neutral.600}"
+        },
+        "selected": {
+          "$description": "Checked/on interior — sanctioned alias of the interactive ramp; content on it is interactive.onBold (declared pair).",
+          "$type": "color",
+          "$value": "{color.interactive.bold.default}"
+        }
+      },
+      "input": {
+        "$description": "THE text-field interior; stateless (focus -> focus.*, disabled -> opacity.disabled).",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.800}"
+      },
+      "subtle": {
+        "$description": "Neutral noninteractive compact bounded interior (static tag/badge). Skeleton/loading is component tier.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.800}"
+      }
+    },
+    "focus": {
+      "$description": "Use the outer and inner focus rings together on the backgrounds declared by color.focus.ring; keep focus additive and separate from the control border. Verify ring geometry and visibility in the rendered interface.",
+      "ring": {
+        "$description": "Draw the outer focus ring with color.focus.ringInner against color.canvas or color.surface (excluding color.surface.inverse), color.fill.input, or color.fill.subtle; do not substitute the control border.",
+        "$type": "color",
+        "$value": "{primitive.color.purple.400}"
+      },
+      "ringInner": {
+        "$description": "Inner ring of the dual-ring recipe: transparent in standard themes, load-bearing in high contrast.",
+        "$type": "color",
+        "$value": "{primitive.color.transparent}"
+      }
+    },
+    "icon": {
+      "$description": "Use ranked non-interactive glyph ink on the same backgrounds as color.text.primary. Status and inverse glyphs follow their leaf-specific pairings; disabled glyphs are contrast-exempt.",
+      "disabled": {
+        "$description": "Only icon role exempt from 3:1.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.500}"
+      },
+      "error": {
+        "$description": "Use for error glyphs on the same backgrounds as color.text.error.",
+        "$type": "color",
+        "$value": "{primitive.color.red.300}"
+      },
+      "info": {
+        "$description": "Use for info glyphs on the same backgrounds as color.text.info.",
+        "$type": "color",
+        "$value": "{primitive.color.blue.300}"
+      },
+      "inverse": {
+        "$description": "Use only on color.surface.inverse.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.900}"
+      },
+      "primary": {
+        "$description": "Primary glyph ink; >=3:1.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.200}"
+      },
+      "secondary": {
+        "$description": "Floor of the icon ladder; >=3:1.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.300}"
+      },
+      "success": {
+        "$description": "Use for success glyphs on the same backgrounds as color.text.success.",
+        "$type": "color",
+        "$value": "{primitive.color.green.300}"
+      },
+      "warning": {
+        "$description": "Use for warning glyphs on the same backgrounds as color.text.warning.",
+        "$type": "color",
+        "$value": "{primitive.color.amber.300}"
+      }
+    },
+    "identity": {
+      "$description": "Indexed identity palette: a deterministic hash of the subject (user, team) picks one item; background and ink are a contrast-locked pair. Consumed by the host at runtime, never through a component slot.",
+      "0": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitive.color.blue.900}"
+        },
+        "ink": {
+          "$type": "color",
+          "$value": "{primitive.color.blue.200}"
+        }
+      },
+      "1": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitive.color.green.900}"
+        },
+        "ink": {
+          "$type": "color",
+          "$value": "{primitive.color.green.200}"
+        }
+      },
+      "2": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitive.color.red.900}"
+        },
+        "ink": {
+          "$type": "color",
+          "$value": "{primitive.color.red.200}"
+        }
+      },
+      "3": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitive.color.purple.900}"
+        },
+        "ink": {
+          "$type": "color",
+          "$value": "{primitive.color.purple.200}"
+        }
+      },
+      "4": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitive.color.teal.900}"
+        },
+        "ink": {
+          "$type": "color",
+          "$value": "{primitive.color.teal.200}"
+        }
+      },
+      "5": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitive.color.orange.900}"
+        },
+        "ink": {
+          "$type": "color",
+          "$value": "{primitive.color.orange.200}"
+        }
+      },
+      "6": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitive.color.pink.900}"
+        },
+        "ink": {
+          "$type": "color",
+          "$value": "{primitive.color.pink.200}"
+        }
+      },
+      "7": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitive.color.amber.900}"
+        },
+        "ink": {
+          "$type": "color",
+          "$value": "{primitive.color.amber.200}"
+        }
+      },
+      "8": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitive.color.blue.800}"
+        },
+        "ink": {
+          "$type": "color",
+          "$value": "{primitive.color.blue.100}"
+        }
+      }
+    },
+    "interactive": {
+      "$description": "Action-hued family: everything painted 'this acts'. Families first, states are leaves. Neutral-looking interactive content uses the text/icon ladder plus the opacity mechanism until interactive.neutral.*.",
+      "bold": {
+        "$description": "CTA fill.",
+        "default": {
+          "$description": "CTA fill.",
+          "$type": "color",
+          "$value": "{primitive.color.purple.400}"
+        },
+        "disabled": {
+          "$description": "Disabled CTA fill (opaque interior exception).",
+          "$type": "color",
+          "$value": "{primitive.color.neutral.700}"
+        },
+        "hover": {
+          "$description": "Hover slot: equals default in all authored themes.",
+          "$type": "color",
+          "$value": "{color.interactive.bold.default}"
+        },
+        "pressed": {
+          "$description": "Pressed CTA fill.",
+          "$type": "color",
+          "$value": "{primitive.color.purple.300}"
+        }
+      },
+      "danger": {
+        "$description": "Destructive-action fill: irreversible or data-losing actions only (delete, remove, revoke, disconnect with data loss). A negative or cancel action is NOT automatically danger. Feedback about failed states is status.error; semantic aliases to/from status are forbidden both ways.",
+        "default": {
+          "$description": "Destructive CTA fill.",
+          "$type": "color",
+          "$value": "{primitive.color.red.400}"
+        },
+        "disabled": {
+          "$description": "Disabled destructive fill (opaque interior exception).",
+          "$type": "color",
+          "$value": "{primitive.color.neutral.700}"
+        },
+        "hover": {
+          "$description": "Hover slot: equals default in all authored themes.",
+          "$type": "color",
+          "$value": "{color.interactive.danger.default}"
+        },
+        "pressed": {
+          "$description": "Pressed destructive fill.",
+          "$type": "color",
+          "$value": "{primitive.color.red.300}"
+        }
+      },
+      "onBold": {
+        "$description": "Use for text and icons on color.interactive.bold.default, color.interactive.bold.hover, color.interactive.bold.pressed, or color.fill.control.selected.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.900}"
+      },
+      "onDanger": {
+        "$description": "Use for text and icons on color.interactive.danger.default, color.interactive.danger.hover, or color.interactive.danger.pressed.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.900}"
+      },
+      "subtle": {
+        "$description": "Soft action wash: quiet button, tappable chip.",
+        "default": {
+          "$description": "Soft action wash: quiet button, tappable chip.",
+          "$type": "color",
+          "$value": "{primitive.color.purple.900}"
+        },
+        "disabled": {
+          "$description": "Disabled wash where whole-element dimming cannot apply.",
+          "$type": "color",
+          "$value": "{primitive.color.neutral.800}"
+        },
+        "hover": {
+          "$description": "Hover slot: equals default in all authored themes.",
+          "$type": "color",
+          "$value": "{color.interactive.subtle.default}"
+        },
+        "pressed": {
+          "$description": "Pressed wash.",
+          "$type": "color",
+          "$value": "{primitive.color.purple.700}"
+        },
+        "selected": {
+          "$description": "Tinted selection container (row/tab/chip).",
+          "$type": "color",
+          "$value": "{primitive.color.purple.800}"
+        }
+      },
+      "tint": {
+        "$description": "Use for action-styled text or glyphs on color.canvas or color.surface (excluding color.surface.inverse), color.fill.input, or color.fill.subtle. Leaf descriptions declare additional action-wash pairings and inverse usage; disabled is exempt.",
+        "default": {
+          "$description": "Use for links and resting action labels; also pairs with color.interactive.subtle.default and color.interactive.subtle.selected.",
+          "$type": "color",
+          "$value": "{primitive.color.purple.300}"
+        },
+        "disabled": {
+          "$description": "Disabled tint where whole-element dimming cannot apply.",
+          "$type": "color",
+          "$value": "{primitive.color.neutral.500}"
+        },
+        "hover": {
+          "$description": "Use for hovered action labels on color.interactive.subtle.hover or the family's host backgrounds. Equals color.interactive.tint.default in authored themes.",
+          "$type": "color",
+          "$value": "{color.interactive.tint.default}"
+        },
+        "inverse": {
+          "$description": "Use for actions on color.surface.inverse.",
+          "$type": "color",
+          "$value": "{primitive.color.purple.600}"
+        },
+        "pressed": {
+          "$description": "Use for pressed action labels on color.interactive.subtle.pressed or the family's host backgrounds.",
+          "$type": "color",
+          "$value": "{primitive.color.purple.200}"
+        }
+      }
+    },
+    "scrim": {
+      "$description": "Dimming veil between content and a modal layer. Opaque override lives on the orthogonal transparency axis, not in contrast themes.",
+      "$type": "color",
+      "$value": {
+        "alpha": 0.6,
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "status": {
+      "$description": "Paired feedback recipes: each value = {subtle, bold, onBold} (washes plus their content). Feedback, not actions — destructive actions live in interactive.danger.*. Hues are system-owned; semantic aliases to/from interactive are forbidden both ways.",
+      "error": {
+        "bold": {
+          "$description": "Saturated error fill.",
+          "$type": "color",
+          "$value": "{primitive.color.red.400}"
+        },
+        "onBold": {
+          "$description": "Use for text and icons on color.status.error.bold.",
+          "$type": "color",
+          "$value": "{primitive.color.neutral.900}"
+        },
+        "subtle": {
+          "$description": "Use for error feedback backgrounds with color.text.primary, color.text.secondary, color.text.tertiary, color.icon.primary, color.icon.secondary, color.text.error, or color.icon.error.",
+          "$type": "color",
+          "$value": "{primitive.color.red.900}"
+        }
+      },
+      "info": {
+        "bold": {
+          "$description": "Saturated info fill.",
+          "$type": "color",
+          "$value": "{primitive.color.blue.400}"
+        },
+        "onBold": {
+          "$description": "Use for text and icons on color.status.info.bold.",
+          "$type": "color",
+          "$value": "{primitive.color.neutral.900}"
+        },
+        "subtle": {
+          "$description": "Use for info feedback backgrounds with color.text.primary, color.text.secondary, color.text.tertiary, color.icon.primary, color.icon.secondary, color.text.info, or color.icon.info.",
+          "$type": "color",
+          "$value": "{primitive.color.blue.900}"
+        }
+      },
+      "success": {
+        "bold": {
+          "$description": "Saturated success fill.",
+          "$type": "color",
+          "$value": "{primitive.color.green.400}"
+        },
+        "onBold": {
+          "$description": "Use for text and icons on color.status.success.bold.",
+          "$type": "color",
+          "$value": "{primitive.color.neutral.900}"
+        },
+        "subtle": {
+          "$description": "Use for success feedback backgrounds with color.text.primary, color.text.secondary, color.text.tertiary, color.icon.primary, color.icon.secondary, color.text.success, or color.icon.success.",
+          "$type": "color",
+          "$value": "{primitive.color.green.900}"
+        }
+      },
+      "warning": {
+        "bold": {
+          "$description": "Saturated warning fill.",
+          "$type": "color",
+          "$value": "{primitive.color.amber.400}"
+        },
+        "onBold": {
+          "$description": "Use for text and icons on color.status.warning.bold.",
+          "$type": "color",
+          "$value": "{primitive.color.neutral.900}"
+        },
+        "subtle": {
+          "$description": "Use for warning feedback backgrounds with color.text.primary, color.text.secondary, color.text.tertiary, color.icon.primary, color.icon.secondary, color.text.warning, or color.icon.warning.",
+          "$type": "color",
+          "$value": "{primitive.color.amber.900}"
+        }
+      }
+    },
+    "surface": {
+      "$description": "Bounded containers ON canvas (cards, cells, menus, toasts). Opaque by contract.",
+      "default": {
+        "$description": "Card, cell, anchored full-height sheet.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.900}"
+      },
+      "inverse": {
+        "$description": "Polarity flip: toast, tooltip. Stateless (polarity is not an interaction state).",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.50}"
+      },
+      "overlay": {
+        "$description": "Floating: menu, popover, dialog.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.800}"
+      },
+      "raised": {
+        "$description": "Lifted container; dark themes express the lift tonally instead of shadow.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.800}"
+      },
+      "subtle": {
+        "$description": "Low-prominence / gently recessed container at the same elevation.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.800}"
+      }
+    },
+    "text": {
+      "$description": "Use ranked text ink on color.canvas or color.surface (excluding color.surface.inverse), color.fill.input, or color.fill.subtle, color.fill.control.default, color.fill.control.hover, and color.fill.control.pressed. Status washes declare their content separately. Use color.interactive.tint for text styled as an action.",
+      "disabled": {
+        "$description": "ONLY contrast-exempt text role (WCAG 1.4.3 inactive). Never used for available-but-secondary content.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.500}"
+      },
+      "error": {
+        "$description": "Use for error feedback on color.canvas or color.surface (excluding color.surface.inverse), color.fill.input, or color.fill.subtle, or color.status.error.subtle.",
+        "$type": "color",
+        "$value": "{primitive.color.red.300}"
+      },
+      "info": {
+        "$description": "Use for info feedback on color.canvas or color.surface (excluding color.surface.inverse), color.fill.input, or color.fill.subtle, or color.status.info.subtle.",
+        "$type": "color",
+        "$value": "{primitive.color.blue.300}"
+      },
+      "inverse": {
+        "$description": "Use only on color.surface.inverse.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.900}"
+      },
+      "placeholder": {
+        "$description": "Use for placeholder text on color.fill.input; not contrast-exempt.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.400}"
+      },
+      "primary": {
+        "$description": "Use for the highest-emphasis text on the backgrounds declared by color.text and status washes.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.50}"
+      },
+      "secondary": {
+        "$description": "Use for supporting text on the same backgrounds as color.text.primary.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.200}"
+      },
+      "success": {
+        "$description": "Use for success feedback on color.canvas or color.surface (excluding color.surface.inverse), color.fill.input, or color.fill.subtle, or color.status.success.subtle.",
+        "$type": "color",
+        "$value": "{primitive.color.green.300}"
+      },
+      "tertiary": {
+        "$description": "Use for the lowest-emphasis readable text on the same backgrounds as color.text.primary; not for disabled content.",
+        "$type": "color",
+        "$value": "{primitive.color.neutral.300}"
+      },
+      "warning": {
+        "$description": "Use for warning feedback on color.canvas or color.surface (excluding color.surface.inverse), color.fill.input, or color.fill.subtle, or color.status.warning.subtle.",
+        "$type": "color",
+        "$value": "{primitive.color.amber.300}"
+      }
+    }
+  }
+}

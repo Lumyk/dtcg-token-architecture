@@ -1,0 +1,89 @@
+{
+  "component": {
+    "card": {
+      "$description": "Use for grouped content. Host-supplied text and icons must be declared for color.surface.default; the card does not own content ink.",
+      "$extensions": {
+        "com.designsystem": {
+          "schemaVersion": 1
+        }
+      },
+      "parts": {
+        "container": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.surface.default}"
+          },
+          "borderColor": {
+            "$type": "color",
+            "$value": "{primitive.color.transparent}"
+          },
+          "borderWidth": {
+            "$type": "dimension",
+            "$value": "{primitive.borderWidth.0}"
+          },
+          "cornerRadius": {
+            "$type": "dimension",
+            "$value": "{primitive.cornerRadius.16}"
+          },
+          "shadow": {
+            "inner": {
+              "$type": "shadow",
+              "$value": "{elevation.none.shadow}"
+            },
+            "outer": {
+              "$type": "shadow",
+              "$value": "{elevation.raised.shadow}"
+            }
+          }
+        }
+      },
+      "size": {
+        "compact": {
+          "$description": "Dense contexts: cards inside lists, side panels, dashboards with many tiles.",
+          "parts": {
+            "container": {
+              "paddingHorizontal": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.12}"
+              },
+              "paddingVertical": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.8}"
+              }
+            }
+          }
+        },
+        "default": {
+          "$description": "The standard card density. Use unless the context demands otherwise.",
+          "parts": {
+            "container": {
+              "paddingHorizontal": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.16}"
+              },
+              "paddingVertical": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.16}"
+              }
+            }
+          }
+        },
+        "spacious": {
+          "$description": "Prominent standalone cards: hero content, marketing tiles, empty states.",
+          "parts": {
+            "container": {
+              "paddingHorizontal": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.20}"
+              },
+              "paddingVertical": {
+                "$type": "dimension",
+                "$value": "{primitive.spacing.20}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
