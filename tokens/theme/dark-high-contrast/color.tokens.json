@@ -334,12 +334,12 @@
         "pressed": {
           "$description": "Pressed wash.",
           "$type": "color",
-          "$value": "{primitive.color.purple.800}"
+          "$value": "{primitive.color.neutral.800}"
         },
         "selected": {
           "$description": "Tinted selection container (row/tab/chip).",
           "$type": "color",
-          "$value": "{primitive.color.purple.900}"
+          "$value": "{primitive.color.purple.800}"
         }
       },
       "tint": {
@@ -347,7 +347,7 @@
         "default": {
           "$description": "Use for links and resting action labels; also pairs with color.interactive.subtle.default and color.interactive.subtle.selected.",
           "$type": "color",
-          "$value": "{primitive.color.purple.200}"
+          "$value": "{primitive.color.purple.50}"
         },
         "disabled": {
           "$description": "Disabled tint where whole-element dimming cannot apply.",

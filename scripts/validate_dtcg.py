@@ -1560,6 +1560,24 @@ def component_opacity(path, resolved, background=None):
     return container, own
 
 
+def check_state_distinctness(resolved, label):
+    """Default, pressed and selected fills of one family must resolve to distinct colors."""
+    for family in ("color.interactive.subtle", "color.fill.control"):
+        seen = {}
+        for state in ("default", "pressed", "selected"):
+            path = f"{family}.{state}"
+            key = _color_key(resolved[path])
+            require(
+                key not in seen,
+                f"[{label}] {path} resolves to the same color as {seen.get(key)}",
+            )
+            seen[key] = path
+
+
+def _color_key(color):
+    return (tuple(round(c, 6) for c in color["components"]), color.get("alpha", 1))
+
+
 def check_contrast(flat, resolved, label, high_contrast):
     expected = {
         "avatar",
@@ -1699,6 +1717,7 @@ def validate_documents(documents: dict) -> dict:
             flat = compose_context(documents, resolver, choices)
             resolved = resolve_values(flat, label)
             check_resolved_metrics(flat, resolved, label)
+            check_state_distinctness(resolved, label)
             report["contrast_checks"] += check_contrast(
                 flat, resolved, label, "high-contrast" in choices["theme"]
             )

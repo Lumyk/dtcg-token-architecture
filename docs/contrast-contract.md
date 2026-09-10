@@ -48,6 +48,9 @@ with unspecified or mixed-size usage MUST meet 4.5:1; a name such as
   [WCAG 1.4.6](https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html).
   Guaranteed large text keeps its 4.5:1 minimum. The validator raises the
   4.5:1 text minimum to 7:1 in high-contrast contexts; a miss fails.
+- Meeting 7:1 MUST NOT collapse state cues: `interactive.subtle` and
+  `fill.control` keep distinct resolved colors for `default`, `pressed`,
+  and `selected` in every context. The validator rejects a collapse.
 - High-contrast themes SHOULD improve meaningful pair contrast over
   the corresponding light or dark theme where improvement is possible.
   Non-text contrast SHOULD exceed the 3:1 minimum where practical;
