@@ -11,8 +11,8 @@ accepted against. Companion to the
 
 Normative words: **MUST** (contract requirement), **SHOULD** (deviation
 needs a reason), **MAY** (allowed). This contract uses the WCAG 2.x
-contrast-ratio calculation. WCAG AA contrast minima are requirements in every theme;
-high-contrast themes additionally require the enhanced text targets below.
+contrast-ratio calculation. WCAG AA contrast minima are requirements in every theme.
+High-contrast themes additionally require the enhanced text targets below.
 
 ## 1. Thresholds
 
@@ -47,13 +47,13 @@ with unspecified or mixed-size usage MUST meet 4.5:1; a name such as
   [WCAG 1.4.6](https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html)
   enhanced ratio of 7:1. In these contexts the validator treats every
   4.5:1 text pair as a 7:1 pair and fails on a miss.
-- No declared pair currently uses the large-text minimum; every 3:1 pair
+- No declared pair currently uses the large-text minimum. Every 3:1 pair
   is non-text. If a large-text pair is ever declared, its high-contrast
   minimum is 4.5:1, and the validator needs to tell it apart from
   non-text pairs before that can be enforced.
 - Reaching 7:1 by nudging fills MUST NOT erase state cues. In every
   context, `interactive.subtle` and `fill.control` resolve `default`,
-  `pressed`, and `selected` to three different colors; the validator
+  `pressed`, and `selected` to three different colors. The validator
   rejects two states that share one.
 - High-contrast themes SHOULD improve meaningful pair contrast over
   the corresponding light or dark theme where improvement is possible.
@@ -128,7 +128,7 @@ including decorative surfaces; its only primitive exception is
   Appearance and platform overrides MUST preserve the same obligations.
   A failing minimum blocks the change that introduced it.
 - The high-contrast 7:1 text requirement is checked and reported the
-  same way as the required minima; missing it blocks the change.
+  same way as the required minima. Missing it blocks the change.
 - Verify actual component references after composition as well as the
   semantic pairs: a valid palette does not guarantee that a recipe
   selects the correct ink. Tests explicitly encode pairs according to
