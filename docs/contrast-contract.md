@@ -46,8 +46,11 @@ with unspecified or mixed-size usage MUST meet 4.5:1; a name such as
 - Text MUST reach 7:1 in `light-high-contrast` and `dark-high-contrast`,
   using the enhanced targets from
   [WCAG 1.4.6](https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html).
-  Guaranteed large text keeps its 4.5:1 minimum. The validator raises the
-  4.5:1 text minimum to 7:1 in high-contrast contexts; a miss fails.
+  The validator raises every 4.5:1 text minimum to 7:1 in high-contrast
+  contexts; a miss fails. This repository declares no large-text pairs:
+  every 3:1 pair is non-text. Introducing a large-text pair requires the
+  gate to distinguish it and apply the 4.5:1 enhanced minimum in
+  high-contrast contexts.
 - Meeting 7:1 MUST NOT collapse state cues: `interactive.subtle` and
   `fill.control` keep distinct resolved colors for `default`, `pressed`,
   and `selected` in every context. The validator rejects a collapse.

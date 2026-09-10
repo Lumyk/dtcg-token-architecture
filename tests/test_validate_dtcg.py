@@ -42,6 +42,12 @@ class ContractTests(unittest.TestCase):
         ] = "{primitive.color.purple.900}"
         self.rejects(r"dark-high-contrast.*subtle\.selected resolves to the same color as .*subtle\.default")
 
+    def test_control_fill_states_must_stay_distinct(self):
+        self.node("theme/light/color.tokens.json", "color.fill.control.pressed")[
+            "$value"
+        ] = "{primitive.color.neutral.200}"
+        self.rejects(r"theme=light\].*fill\.control\.pressed resolves to the same color as .*fill\.control\.default")
+
     def test_high_contrast_text_requires_enhanced_ratio(self):
         # neutral.700 on the light-high-contrast pressed fill passes 4.5:1 but not 7:1.
         self.node("theme/light-high-contrast/color.tokens.json", "color.text.tertiary")[
