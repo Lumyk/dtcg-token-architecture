@@ -244,6 +244,10 @@ token paths, types or value shapes:
   have its family base declared. A leaf whose final segment is not a
   state word is a stateless variant. How leaves compose into a resolved
   state is the compound-state algorithm (§7), not extra names.
+- **States stay distinguishable**: within `interactive.subtle` and
+  `fill.control`, `default`, `pressed`, and `selected` MUST resolve to
+  three different colors in every context. Two states sharing one color
+  is a gate error.
 - **`inverse` is polarity, not a state**: a stateless variant for
   opposite-polarity surfaces — it is not a state of any base and has no
   states of its own.

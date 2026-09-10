@@ -45,16 +45,10 @@ with unspecified or mixed-size usage MUST meet 4.5:1; a name such as
 
 - In `light-high-contrast` and `dark-high-contrast`, text MUST reach the
   [WCAG 1.4.6](https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html)
-  enhanced ratio of 7:1. In these contexts the validator treats every
-  4.5:1 text pair as a 7:1 pair and fails on a miss.
-- No declared pair currently uses the large-text minimum. Every 3:1 pair
-  is non-text. If a large-text pair is ever declared, its high-contrast
-  minimum is 4.5:1, and the validator needs to tell it apart from
-  non-text pairs before that can be enforced.
-- Reaching 7:1 by nudging fills MUST NOT erase state cues. In every
-  context, `interactive.subtle` and `fill.control` resolve `default`,
-  `pressed`, and `selected` to three different colors. The validator
-  rejects two states that share one.
+  enhanced ratios: 7:1 for text, 4.5:1 for guaranteed large text. A miss
+  is a gate error.
+- Retuning a fill for contrast does not relax state distinctness
+  ([semantic §6](semantic-token-contract.md#6-naming-rules)).
 - High-contrast themes SHOULD improve meaningful pair contrast over
   the corresponding light or dark theme where improvement is possible.
   Non-text contrast SHOULD exceed the 3:1 minimum where practical;
