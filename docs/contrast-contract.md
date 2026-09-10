@@ -43,17 +43,18 @@ with unspecified or mixed-size usage MUST meet 4.5:1; a name such as
 
 ### Required enhancement — high-contrast themes
 
-- Text MUST reach 7:1 in `light-high-contrast` and `dark-high-contrast`,
-  using the enhanced targets from
-  [WCAG 1.4.6](https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html).
-  The validator raises every 4.5:1 text minimum to 7:1 in high-contrast
-  contexts; a miss fails. This repository declares no large-text pairs:
-  every 3:1 pair is non-text. Introducing a large-text pair requires the
-  gate to distinguish it and apply the 4.5:1 enhanced minimum in
-  high-contrast contexts.
-- Meeting 7:1 MUST NOT collapse state cues: `interactive.subtle` and
-  `fill.control` keep distinct resolved colors for `default`, `pressed`,
-  and `selected` in every context. The validator rejects a collapse.
+- In `light-high-contrast` and `dark-high-contrast`, text MUST reach the
+  [WCAG 1.4.6](https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html)
+  enhanced ratio of 7:1. In these contexts the validator treats every
+  4.5:1 text pair as a 7:1 pair and fails on a miss.
+- No declared pair currently uses the large-text minimum; every 3:1 pair
+  is non-text. If a large-text pair is ever declared, its high-contrast
+  minimum is 4.5:1, and the validator needs to tell it apart from
+  non-text pairs before that can be enforced.
+- Reaching 7:1 by nudging fills MUST NOT erase state cues. In every
+  context, `interactive.subtle` and `fill.control` resolve `default`,
+  `pressed`, and `selected` to three different colors; the validator
+  rejects two states that share one.
 - High-contrast themes SHOULD improve meaningful pair contrast over
   the corresponding light or dark theme where improvement is possible.
   Non-text contrast SHOULD exceed the 3:1 minimum where practical;
