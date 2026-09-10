@@ -1608,7 +1608,6 @@ def check_contrast(flat, resolved, label, high_contrast):
                     path in covered,
                     f"[{label}] add a component contrast check for {path}",
                 )
-    advisories = set()
     for foreground, background, minimum, backdrop in pairs:
         for path in (foreground, background, backdrop):
             if path is not None:
@@ -1661,13 +1660,14 @@ def check_contrast(flat, resolved, label, high_contrast):
         measured = contrast_ratio(
             foreground_value, background_value, resolved.get(backdrop)
         )
+        if high_contrast and minimum == 4.5:
+            # High-contrast themes owe enhanced text contrast (WCAG 1.4.6).
+            minimum = 7
         require(
             measured >= minimum,
             f"[{label}] contrast {foreground} / {background}: {measured:.6f}:1 < {minimum}:1",
         )
-        if high_contrast and minimum == 4.5 and measured < 7:
-            advisories.add((foreground, background, backdrop))
-    return len(pairs), len(advisories)
+    return len(pairs)
 
 
 def validate_documents(documents: dict) -> dict:
@@ -1679,7 +1679,7 @@ def validate_documents(documents: dict) -> dict:
     check_platforms(documents)
     check_components(documents)
     check_material_ownership(documents)
-    report = {"contexts": 0, "contrast_checks": 0, "advisories": []}
+    report = {"contexts": 0, "contrast_checks": 0}
     for name, resolver in documents.items():
         if not name.endswith(".resolver.json"):
             continue
@@ -1699,14 +1699,9 @@ def validate_documents(documents: dict) -> dict:
             flat = compose_context(documents, resolver, choices)
             resolved = resolve_values(flat, label)
             check_resolved_metrics(flat, resolved, label)
-            count, advisory_count = check_contrast(
+            report["contrast_checks"] += check_contrast(
                 flat, resolved, label, "high-contrast" in choices["theme"]
             )
-            report["contrast_checks"] += count
-            if advisory_count:
-                report["advisories"].append(
-                    f"{label}: {advisory_count} text pairs below recommended 7:1; required minima pass"
-                )
             report["contexts"] += 1
     return report
 
@@ -1725,5 +1720,3 @@ if __name__ == "__main__":
     print(
         f"tokens/ valid — {report['contexts']} contexts, {report['contrast_checks']} contrast checks"
     )
-    for advisory in report["advisories"]:
-        print(f"ADVISORY: {advisory}")

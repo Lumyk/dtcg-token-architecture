@@ -334,12 +334,12 @@
         "pressed": {
           "$description": "Pressed wash.",
           "$type": "color",
-          "$value": "{primitive.color.purple.700}"
+          "$value": "{primitive.color.purple.800}"
         },
         "selected": {
           "$description": "Tinted selection container (row/tab/chip).",
           "$type": "color",
-          "$value": "{primitive.color.purple.800}"
+          "$value": "{primitive.color.purple.900}"
         }
       },
       "tint": {
@@ -362,7 +362,7 @@
         "inverse": {
           "$description": "Use for actions on color.surface.inverse.",
           "$type": "color",
-          "$value": "{primitive.color.purple.700}"
+          "$value": "{primitive.color.purple.800}"
         },
         "pressed": {
           "$description": "Use for pressed action labels on color.interactive.subtle.pressed or the family's host backgrounds.",
@@ -493,7 +493,7 @@
       "error": {
         "$description": "Use for error feedback on color.canvas or color.surface (excluding color.surface.inverse), color.fill.input, or color.fill.subtle, or color.status.error.subtle.",
         "$type": "color",
-        "$value": "{primitive.color.red.200}"
+        "$value": "{primitive.color.red.100}"
       },
       "info": {
         "$description": "Use for info feedback on color.canvas or color.surface (excluding color.surface.inverse), color.fill.input, or color.fill.subtle, or color.status.info.subtle.",
@@ -518,7 +518,7 @@
       "secondary": {
         "$description": "Use for supporting text on the same backgrounds as color.text.primary.",
         "$type": "color",
-        "$value": "{primitive.color.neutral.100}"
+        "$value": "{primitive.color.neutral.50}"
       },
       "success": {
         "$description": "Use for success feedback on color.canvas or color.surface (excluding color.surface.inverse), color.fill.input, or color.fill.subtle, or color.status.success.subtle.",
@@ -528,7 +528,7 @@
       "tertiary": {
         "$description": "Use for the lowest-emphasis readable text on the same backgrounds as color.text.primary; not for disabled content.",
         "$type": "color",
-        "$value": "{primitive.color.neutral.200}"
+        "$value": "{primitive.color.neutral.50}"
       },
       "warning": {
         "$description": "Use for warning feedback on color.canvas or color.surface (excluding color.surface.inverse), color.fill.input, or color.fill.subtle, or color.status.warning.subtle.",

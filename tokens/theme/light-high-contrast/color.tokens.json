@@ -263,7 +263,7 @@
         "default": {
           "$description": "CTA fill.",
           "$type": "color",
-          "$value": "{primitive.color.purple.700}"
+          "$value": "{primitive.color.purple.800}"
         },
         "disabled": {
           "$description": "Disabled CTA fill (opaque interior exception).",
@@ -278,7 +278,7 @@
         "pressed": {
           "$description": "Pressed CTA fill.",
           "$type": "color",
-          "$value": "{primitive.color.purple.800}"
+          "$value": "{primitive.color.purple.900}"
         }
       },
       "danger": {
@@ -286,7 +286,7 @@
         "default": {
           "$description": "Destructive CTA fill.",
           "$type": "color",
-          "$value": "{primitive.color.red.700}"
+          "$value": "{primitive.color.red.800}"
         },
         "disabled": {
           "$description": "Disabled destructive fill (opaque interior exception).",
@@ -301,7 +301,7 @@
         "pressed": {
           "$description": "Pressed destructive fill.",
           "$type": "color",
-          "$value": "{primitive.color.red.800}"
+          "$value": "{primitive.color.red.900}"
         }
       },
       "onBold": {
@@ -334,7 +334,7 @@
         "pressed": {
           "$description": "Pressed wash.",
           "$type": "color",
-          "$value": "{primitive.color.purple.300}"
+          "$value": "{primitive.color.purple.200}"
         },
         "selected": {
           "$description": "Tinted selection container (row/tab/chip).",
@@ -347,7 +347,7 @@
         "default": {
           "$description": "Use for links and resting action labels; also pairs with color.interactive.subtle.default and color.interactive.subtle.selected.",
           "$type": "color",
-          "$value": "{primitive.color.purple.700}"
+          "$value": "{primitive.color.purple.900}"
         },
         "disabled": {
           "$description": "Disabled tint where whole-element dimming cannot apply.",
@@ -367,7 +367,7 @@
         "pressed": {
           "$description": "Use for pressed action labels on color.interactive.subtle.pressed or the family's host backgrounds.",
           "$type": "color",
-          "$value": "{primitive.color.purple.800}"
+          "$value": "{primitive.color.purple.900}"
         }
       }
     },
@@ -390,7 +390,7 @@
         "bold": {
           "$description": "Saturated error fill.",
           "$type": "color",
-          "$value": "{primitive.color.red.700}"
+          "$value": "{primitive.color.red.800}"
         },
         "onBold": {
           "$description": "Use for text and icons on color.status.error.bold.",
@@ -407,7 +407,7 @@
         "bold": {
           "$description": "Saturated info fill.",
           "$type": "color",
-          "$value": "{primitive.color.blue.700}"
+          "$value": "{primitive.color.blue.800}"
         },
         "onBold": {
           "$description": "Use for text and icons on color.status.info.bold.",
@@ -441,7 +441,7 @@
         "bold": {
           "$description": "Saturated warning fill.",
           "$type": "color",
-          "$value": "{primitive.color.amber.600}"
+          "$value": "{primitive.color.amber.400}"
         },
         "onBold": {
           "$description": "Use for text and icons on color.status.warning.bold.",
@@ -493,7 +493,7 @@
       "error": {
         "$description": "Use for error feedback on color.canvas or color.surface (excluding color.surface.inverse), color.fill.input, or color.fill.subtle, or color.status.error.subtle.",
         "$type": "color",
-        "$value": "{primitive.color.red.800}"
+        "$value": "{primitive.color.red.900}"
       },
       "info": {
         "$description": "Use for info feedback on color.canvas or color.surface (excluding color.surface.inverse), color.fill.input, or color.fill.subtle, or color.status.info.subtle.",
@@ -523,17 +523,17 @@
       "success": {
         "$description": "Use for success feedback on color.canvas or color.surface (excluding color.surface.inverse), color.fill.input, or color.fill.subtle, or color.status.success.subtle.",
         "$type": "color",
-        "$value": "{primitive.color.green.800}"
+        "$value": "{primitive.color.green.900}"
       },
       "tertiary": {
         "$description": "Use for the lowest-emphasis readable text on the same backgrounds as color.text.primary; not for disabled content.",
         "$type": "color",
-        "$value": "{primitive.color.neutral.700}"
+        "$value": "{primitive.color.neutral.800}"
       },
       "warning": {
         "$description": "Use for warning feedback on color.canvas or color.surface (excluding color.surface.inverse), color.fill.input, or color.fill.subtle, or color.status.warning.subtle.",
         "$type": "color",
-        "$value": "{primitive.color.amber.800}"
+        "$value": "{primitive.color.amber.900}"
       }
     }
   }

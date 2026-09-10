@@ -97,8 +97,8 @@ Both commands use only the Python standard library (Python 3.12+). The existing
 validator checks every resolver and theme × appearance context, including mirrored
 platform overrides, nested typed aliases, value shapes, component ownership,
 family completeness, selection, state grammar, and material/appearance rules.
-Required contrast minima fail validation; enhanced text targets produce separate
-advisories. Pair checks are explicit code derived from token usage descriptions,
+Required contrast minima fail validation; in high-contrast themes the text minimum
+is the enhanced 7:1 target. Pair checks are explicit code derived from token usage descriptions,
 not a parser for `$description`. Extend recipe/pair coverage alongside new usage.
 
 Tests mutate in-memory copies to verify rejection of invalid tokens without changing
