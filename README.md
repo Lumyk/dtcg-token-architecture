@@ -97,8 +97,8 @@ Both commands use only the Python standard library (Python 3.12+). The existing
 validator checks every resolver and theme × appearance context, including mirrored
 platform overrides, nested typed aliases, value shapes, component ownership,
 family completeness, selection, state grammar, and material/appearance rules.
-Required contrast minima fail validation; enhanced text targets produce separate
-advisories. Pair checks are explicit code derived from token usage descriptions,
+Required contrast minima fail validation. In high-contrast themes the text minimum
+is the enhanced 7:1 target. Pair checks are explicit code derived from token usage descriptions,
 not a parser for `$description`. Extend recipe/pair coverage alongside new usage.
 
 Tests mutate in-memory copies to verify rejection of invalid tokens without changing
@@ -107,7 +107,9 @@ the authored files. GitHub Actions runs both commands on pushes and pull request
 This is a repository-contract gate, not a complete DTCG implementation or official
 JSON Schema validator. Its supported profile uses explicit leaf types, brace aliases,
 sRGB colors, and the current theme/appearance axes. New color spaces or resolver axes
-need corresponding gate support. Human review still owns role intent, description
+need corresponding gate support. The gate does not model large text: every 3:1
+pair is non-text, and in high-contrast contexts it raises all 4.5:1 text pairs to
+7:1. Human review still owns role intent, description
 accuracy, structural-variant justification, recipe coherence, and rendered
 accessibility (including selection cues, focus geometry, and materials). Passing
 numeric contrast checks alone does not establish WCAG conformance.

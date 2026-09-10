@@ -11,8 +11,8 @@ accepted against. Companion to the
 
 Normative words: **MUST** (contract requirement), **SHOULD** (deviation
 needs a reason), **MAY** (allowed). This contract uses the WCAG 2.x
-contrast-ratio calculation. WCAG AA contrast minima are requirements;
-enhanced contrast targets are recommendations, as distinguished below.
+contrast-ratio calculation. WCAG AA contrast minima are requirements in every theme.
+High-contrast themes additionally require the enhanced text targets below.
 
 ## 1. Thresholds
 
@@ -41,19 +41,18 @@ alone does not establish that guarantee across platforms. A text role
 with unspecified or mixed-size usage MUST meet 4.5:1; a name such as
 `title` is not evidence of large text.
 
-### Recommended enhancement — high-contrast themes
+### Required enhancement — high-contrast themes
 
-- Text SHOULD reach 7:1, or 4.5:1 for guaranteed large text, using the
-  enhanced targets from
-  [WCAG 1.4.6](https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html).
-  These AAA contrast targets are recommendations here, not acceptance
-  requirements.
+- In `light-high-contrast` and `dark-high-contrast`, text MUST reach the
+  [WCAG 1.4.6](https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html)
+  enhanced ratios: 7:1 for text, 4.5:1 for guaranteed large text. A miss
+  is a gate error.
+- Retuning a fill for contrast does not relax state distinctness
+  ([semantic §6](semantic-token-contract.md#6-naming-rules)).
 - High-contrast themes SHOULD improve meaningful pair contrast over
   the corresponding light or dark theme where improvement is possible.
   Non-text contrast SHOULD exceed the 3:1 minimum where practical;
   there is no separate mandatory 4.5:1 non-text threshold.
-- A missed enhancement target is a review advisory, not a failing
-  minimum. A deviation SHOULD have a documented design reason.
 
 Passing the required minima establishes only the declared contrast
 checks, not conformance with all WCAG AA criteria for an interface.
@@ -122,9 +121,8 @@ including decorative surfaces; its only primitive exception is
   composited values without rounding a failing ratio up to the minimum.
   Appearance and platform overrides MUST preserve the same obligations.
   A failing minimum blocks the change that introduced it.
-- Recommended enhancement results SHOULD be reported separately from
-  required-minimum failures. Missing a recommendation alone does not
-  block a change.
+- The high-contrast 7:1 text requirement is checked and reported the
+  same way as the required minima. Missing it blocks the change.
 - Verify actual component references after composition as well as the
   semantic pairs: a valid palette does not guarantee that a recipe
   selects the correct ink. Tests explicitly encode pairs according to

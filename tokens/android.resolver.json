@@ -55,7 +55,7 @@
         ]
       },
       "default": "light",
-      "description": "Appearance mode"
+      "description": "Color theme"
     }
   },
   "name": "Design Tokens",
